@@ -1,0 +1,82 @@
+<div class="leftcol">
+	<div class="title-box">
+        <div class="text crumb"><a href="/">{_home}</a> / Search result </div>
+    </div>
+    <div class="c10"></div>
+    <div class="box-border padding10">
+    	
+        
+<div style="padding: 0px 10px 10px 10px; line-height: 20px;">
+            
+            <!-- START BLOCK : info -->
+            <h1 class="page-name">{name}</h1>
+            <div>{content}</div>
+
+            
+            <div class="fr">
+                
+            </div>
+            
+            
+            <!-- END BLOCK : info -->
+
+            
+<div>
+
+    <div class="c"></div>
+    <!-- START BLOCK : keywords -->
+    <div>
+        <h1 class="news-title" style="font-size: 14px;" >Search result for "{keywords}"</h1>
+    </div>            
+    <!-- END BLOCK : keywords -->
+    
+    <!-- START BLOCK : no_result -->
+    <div class="c20"></div>
+    <div style="text-align: center; font-weight: bold">Sorry, no results found !</div>
+    <div class="c10"></div>
+    <!-- END BLOCK : no_result -->
+
+    <!-- START BLOCK : item_list -->
+    <div class="newsname" style="margin-bottom: 20px; padding: 10px; ">
+        <h2 class="newsname" style="margin: 0px;"><a class="newsname" href="{link_detail}">{image}{name}</a></h2>
+        <div style="text-align:justify;padding-top:5px;">
+            {intro} 
+        </div>
+        <div class="c"></div>
+    </div>
+
+    <!-- END BLOCK : item_list -->
+    <div class="paging">{pages}</div>            
+
+
+
+    <div class="c20"></div>
+</div>            
+            
+
+        </div>        
+        
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="{dir_path}/js/hightlight.js"></script>
+<!-- START BLOCK : highlight_list -->
+<script language="javascript">
+    $(function() {
+        $('.news-list').highlight('{keywords}');
+        $('.news-list').highlight('{h_keywords}');
+        
+    });
+</script>
+<!-- END BLOCK : highlight_list -->
+
+<style>
+    .highlight{
+        background-color: #ffff00;
+    }
+
+</style>
+

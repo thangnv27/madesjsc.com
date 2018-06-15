@@ -1,0 +1,341 @@
+<style>
+	.btn-cart-3,.btn-cart-2,.btn-cart-1{
+		padding:8px 0px;
+		width:100%;
+		border:none;
+		color:#FFF;
+		white-space:pre-wrap;
+		font-weight:bold;
+	}
+	.btn-cart-1{
+		background: #f5791f;
+		border:solid 2px #f5791f;	
+	}
+	.btn-cart-2{
+		background: #999;	
+		border:solid 2px #999;
+	}
+	.btn-cart-3{
+		background: #00904c;
+		border:solid 2px #00904c;	
+	}
+	.cart-price{
+		color:#333;
+		font-weight:bold;	
+	}
+	.total-payment{
+		color:#333;
+		font-weight:bold;
+		font-size:16px;	
+	}
+	
+	.cart-message,.cart-message-error {
+		color: #468847;
+		background-color: #dff0d8;
+		border-color: #d6e9c6;
+		text-align:center;
+		padding: 8px 35px 8px 14px;
+		margin-bottom: 20px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+		background-color: #fcf8e3;
+		border: 1px solid #fbeed5;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+	.cart-message-error{
+		color: #b94a48;
+		background-color: #f2dede;
+		border-color: #eed3d7;
+	}
+	.cart-title{
+		background:#EEE;
+		padding:8px 5px;	
+		font-weight:bold;
+		margin-bottom:10px;
+		font-size:14px;
+	}
+	.cart-note{
+		 white-space:nowrap; font-size:12px; color:#666; font-weight:normal;
+	}
+	.cart-info-text{
+		width:100%;
+		height:30px;	
+	}
+	.cart-info-textarea{
+		width:100%;
+		height:80px;	
+	}
+	.cart-label{
+		font-weight:bold;	
+	}
+	.cart-red{
+		color:#FF0000;	
+	}
+	.border-cc{
+		border-bottom:solid 1px #eee;	
+		clear:both;
+		padding:5px 0px;
+	}
+	a.fa-trash{
+		color:#333;
+		text-decoration:none;	
+	}
+	a.fa-trash:hover{
+		color:#FF0000;	
+	}
+	.color{
+		width:25px;
+		height:25px;
+		display:inline-block;
+		border:solid 1px #CCC;
+	}
+</style>
+
+<div class="col-9-12">
+	<div class="c20"></div>
+	<!-- START BLOCK : giohang -->
+    	<form method='POST' action='{dir_path}/update_cat.html' name='checkoutform'>
+        <!-- START BLOCK : giohang_row -->
+        <div class="col-3-12" align="center"><a href="{link_detail}" target="_blank">{giohang_image}</a></div>
+        <div class="col-9-12">
+            <div class="col-3-12" style="font-weight:bold; font-size:16px;"><a href="{link_detail}" class="vtip" title="View product" target="_blank">{giohang_name}</a></div>
+            <div class="col-2-12 cart-price">Giá: {giohang_price} VNĐ&nbsp;{donvitinh}</div>
+            <div class="col-2-12">Số lượng: <input type='text' name='quant{giohang_id}' value='{giohang_soluong}' style="text-align:center; width:40px;"></div>
+            <div class="col-1-12"><div>Màu</div><div class="color" style="background:{color}"></div></div>
+            <div class="col-3-12 cart-price">Tổng: {giohang_tongtien}&nbsp;VNĐ&nbsp;{donvitinh}</div>
+            <div class="col-1-12"><a href="{dir_path}/update_cat.html?iddel={giohang_id}" class="fa fa-trash fa-2x"></a></div>
+        </div>
+        <div class="c5"></div>
+        <div style="border-bottom:solid 1px #CCC"></div>
+        <div class="c5"></div>
+        <!-- END BLOCK : giohang_row -->
+        <div class="c10"></div>
+        <div>
+        <div class="col-1-3 hide-on-mobile" style="height:10px;"></div><div class="col-2-3 total-payment" align="right">Tổng thanh toán: {giohang_tongcong} VNĐ</div></div>
+        <div class="c15"></div>
+        
+        <div>
+        	<div class="col-2-3">
+                <div class="col-1-2">
+                    <input type="button" name="Button" value="Chon tiếp sản phẩm khác" onclick="history.back();" class="btn-cart-1" />
+                </div>
+                <div class="col-1-2">
+                    <input type="button" name="Button2" value="Cập nhật số lượng"  onclick="document.checkoutform.submit()" class="btn-cart-2"/>
+                </div>
+            </div>
+            <div class="col-1-3">
+            	<div class="col-1-3 hide-on-mobile" style="height:20px;"> </div>
+            	<div class="col-2-3">
+            	<input type="button" name="Submit2" value="Đặt hàng" onclick="window.location='{dir_path}/cart_checkout.html'" class="btn-cart-3" style="display:none"/>
+                </div>
+            </div>
+            <div class="c20"></div>
+        </div>
+        </form>
+    <!-- END BLOCK : giohang -->
+    <!-- START BLOCK : message -->
+    <div class="c20"></div>
+    <div class="cart-message">{msg}</div>
+    <div class="c"></div>
+    <!-- END BLOCK : message -->
+    <!-- START BLOCK : formuserorder -->
+    <form method='POST' action='{dir_path}/index.php?page=cart&code=procheckout' name='frmorder2' id="frmorder2" onsubmit='return check_checkout_form()'>	
+    <div id="checkout_cart">
+    	<div class="cart-title">
+        	Thông tin người mua<span style="float:right" class="cart-note"><em>(<span class="cart-red">*</span>) Là thông tin bắt buộc phải nhập</em></span>
+            <div class="c"></div>
+        </div>
+        <div>
+            <div class="col-3-12 cart-label">Họ tên: (<span class="cart-red">*</span>)</div>
+            <div class="col-5-12"><input name='name' type='text' class="cart-info-text not-null" id="name" value="{name}" /></div>
+        </div>
+        <div class="c5 hide-on-mobile"></div>
+        <div>
+            <div class="col-3-12 cart-label">Điện thoại: (<span class="cart-red">*</span>)</div>
+            <div class="col-5-12"><input name='phone' id='phone' class="cart-info-text not-null" type='text' value="{phone}" ></div>
+        </div>
+        <div class="c5 hide-on-mobile"></div>
+        <div>
+            <div class="col-3-12 cart-label">Email: (<span class="cart-red">*</span>)</div>
+            <div class="col-5-12"><input name='email' id='email' class="cart-info-text  not-null" type='text' value="{email}"></div>
+        </div>
+        <div class="c5 hide-on-mobile"></div>
+        <div>
+            <div class="col-3-12 cart-label">Địa chỉ: (<span class="cart-red">*</span>)</div>
+            <div class="col-5-12"><input name='address'  class="cart-info-text not-null" id='address' type='text' value="{address}"></div>
+        </div>
+        <div class="c5 hide-on-mobile"></div>
+        <div>
+            <div class="col-3-12 cart-label">Yêu cầu:</div>
+            <div class="col-5-12"><textarea name='addinfo' class="cart-info-textarea" id='addinfo' rows='5' >{addinfo}</textarea></div>
+        </div>
+        <div class="c5 hide-on-mobile"></div>
+        <div>
+        	<div class="col-3-12 cart-label" style="min-height:10px"><strong>Nhập mã bảo mật *: </strong></div>
+        	<div class="col-5-12">
+            	<input name="sercurity" type="text" id="sercurity" style="width:100px" data-alert="Bạn cần nhập captcha !" class="cart-info-text  not-null"  />
+              <img src="{dir_path}/lib/imagesercurity.php" name="imgCaptcha" align="absmiddle" id="imgCaptcha" />
+            </div>
+        </div>
+        <div class="c15"></div>
+        
+        <div style="display:none;" class="cart-message-error" id="show_mess_null">
+        	Những trường đánh dấu màu đỏ bắt buộc phải nhập thông tin.
+        </div>
+        <div class="col-3-12 hide-on-mobile" style="height:10px;"></div>
+        <div class="col-3-12">
+	        <input type="button" name="Submit2" value="Đặt hàng" onclick="$('#frmorder2').submit();" class="btn-cart-1" id="btn_frmorder2"/>
+        </div>
+    </div>
+    </form>
+    <script>
+    	function check_checkout_form(){
+			var ok = true;
+			$('#show_mess_null').hide();
+			$('.cart-label').removeClass('cart-red');
+			$('#checkout_cart .not-null').each(function(){
+				if($(this).val() ==''){
+					var x = $(this).parent().parent();
+					$('.cart-label',x).addClass('cart-red');
+					ok = false;	
+				}
+				if($(this).attr('id') == 'email' && $(this).val()!='' ){
+					checkEmail = $(this).val();
+					if ((checkEmail.indexOf('@') < 0) || ((checkEmail.charAt(checkEmail.length-4) != '.') && (checkEmail.charAt(checkEmail.length-3) != '.'))) {
+					   alert("Địa chỉ email không đúng");
+					   $('#email').focus();
+					   ok = false;
+					}
+				}
+			});
+			if(ok==true) {
+				$('#show_mess_null').hide();
+				$('#btn_frmorder2').removeClass('btn-cart-1').addClass('btn-cart-3');
+			}else{
+				$('#btn_frmorder2').removeClass('btn-cart-3').addClass('btn-cart-1');
+				$('#show_mess_null').fadeIn();
+			}
+			return ok;	
+		}
+		
+		$('.not-null').change(function(){
+			check_checkout_form();
+		});
+		
+		$('#add_info_cart').click(function(){
+			if($(this).prop('checked') == true){
+				$('#g_name').attr('value',$('#name').val());
+				$('#g_phone').attr('value',$('#phone').val());
+				$('#g_email').attr('value',$('#email').val());
+				$('#g_address').attr('value',$('#address').val());
+				$('#g_addinfo').val($('#addinfo').val());
+			}
+			check_checkout_form();
+		});
+    </script>
+    <!-- END BLOCK : formuserorder -->
+    
+    <!-- START BLOCK : orderuser -->
+     <div class="cart-message" style="font-size:18px">Đang gửi đơn hàng, bạn đừng tắt trình duyệt!</div>
+    	<div id="checkout_cart_1">
+            <div class="cart-title">
+                Thông tin người mua
+                <div class="c"></div>
+            </div>
+            <div>
+                <div class="col-3-12 cart-label">Họ tên:</div>
+                <div class="col-5-12">{cusname}</div>
+                <div class="border-cc"></div>
+            </div>
+            <div class="c5 hide-on-mobile"></div>
+            <div>
+                <div class="col-3-12 cart-label">Điện thoại: </div>
+                <div class="col-5-12">{cusphone}</div>
+                <div class="border-cc"></div>
+            </div>
+            <div class="c5 hide-on-mobile"></div>
+            <div>
+                <div class="col-3-12 cart-label">Email:</div>
+                <div class="col-5-12">{cusemail}</div>
+                <div class="border-cc"></div>
+            </div>
+            <div class="c5 hide-on-mobile"></div>
+            <div>
+                <div class="col-3-12 cart-label">Địa chỉ:</div>
+                <div class="col-5-12">{cusaddress}</div>
+                <div class="border-cc"></div>
+            </div>
+            <div class="c5 hide-on-mobile"></div>
+            <div>
+                <div class="col-3-12 cart-label">Yêu cầu:</div>
+                <div class="col-5-12">{cusaddinfo}</div>
+            </div>
+            <div class="c15"></div>
+            
+            
+            
+        </div>
+    <!-- END BLOCK : orderuser -->
+    <!-- START BLOCK : orderprod -->
+	<div class="c20"></div>
+    <div class="cart-title">
+        Danh sách sản phẩm
+        <div class="c"></div>
+    </div>
+    <div class="cart-message" style="font-size:18px">Đang gửi đơn hàng, bạn đừng tắt trình duyệt!</div>
+    <div class="c10"></div>
+    <!-- START BLOCK : orderprod_row -->
+        <div class="col-3-12" align="center" style="min-height:10px;"><a href="{link_detail}" target="_blank">{giohang_image}</a></div>
+        <div class="col-9-12">
+            <div class="col-4-12"><a href="{link_detail}" class="vtip" title="View product" target="_blank"><strong>{giohang_name}</strong></a></div>
+            <div class="col-3-12 cart-price">Giá: {giohang_price} VNĐ&nbsp;{donvitinh}</div>
+            <div class="col-2-12">Số lượng: {giohang_soluong}</div>
+            <div class="col-3-12 cart-price">Tổng: {giohang_tongtien}&nbsp;VNĐ&nbsp;{donvitinh}</div>
+        </div>
+        <div class="c5"></div>
+        <div style="border-bottom:solid 1px #CCC"></div>
+        <div class="c5"></div>
+    <!-- END BLOCK : orderprod_row -->
+    <!-- START BLOCK : tongcong -->
+    <div class="col-6-12 hide-on-mobile" style="height:10px;"></div><div class="col-6-12 total-payment">Tổng thanh toán: {giohang_tongcong} VNĐ</div>
+    <div class="c15"></div>
+    <!-- END BLOCK : tongcong -->
+    <!-- START BLOCK : chuaxacnhan -->
+    <form method='POST' action='{dir_path}/index.php?page=cart&code=procheckout1' name='frmorder9' id='frmorder9'>
+    <input type='hidden' name='username' value='{frm_username}'>
+    <input type='hidden' name='name' value='{frm_name}'>
+    <input type='hidden' name='password' value='{frm_password}'>
+    <input type='hidden' name='tel' value='{frm_tel}'>
+    <input type='hidden' name='phone' value='{frm_phone}'>
+    <input type='hidden' name='email' value='{frm_email}'>
+    <input type='hidden' name='address' value='{frm_address}'>
+    <input type='hidden' name='addinfo' value='{frm_addinfo}'>
+    <input type='hidden' name='miss' value='{frm_password}'>
+    
+    
+    <input type='hidden' name='g_phone' value='{frm_g_phone}'>
+    <input type='hidden' name='g_name' value='{frm_g_name}'>
+    <input type='hidden' name='g_email' value='{frm_g_email}'>
+    <input type='hidden' name='g_address' value='{frm_g_address}'>
+    <input type='hidden' name='g_addinfo' value='{frm_g_addinfo}'>
+    
+    
+    <div class="col-3-12 hide-on-mobile" style="height:10px;"></div>
+    <div class="col-3-12">
+      <!--  <input type="button" name="Submit2" value="Hoàn tất đặt hàng" onclick="$('#frmorder9').submit();" class="btn-cart-3" style="background:#f5791f; border:solid 2px #f5791f; font-size:14px;" id="btn_frmorder2"/>-->
+    </div>
+    <script>
+    	$(function(){
+			$('#frmorder9').submit();	
+		})
+    </script>
+    </form>	
+    <!-- END BLOCK : chuaxacnhan -->
+    
+    <!-- END BLOCK : orderprod -->
+    <!-- START BLOCK : daxacnhan -->
+    <div class="cart-message">Đơn hàng của bạn đã được gửi đi, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất. <br />Cảm ơn bạn !<br></div>
+    <!-- END BLOCK : daxacnhan -->
+    
+</div>

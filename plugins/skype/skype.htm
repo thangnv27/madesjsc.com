@@ -1,0 +1,41 @@
+<style>
+	.skype_call{
+		width:73px;
+		height:32px;
+		background:url(/plugins/skype/callbutton_32px.png) no-repeat;
+		display:block;
+	}
+	.skype_chat{
+		width:86px;
+		height:32px;
+		background:url(/plugins/skype/chatbutton_32px.png) no-repeat;
+		display:block;
+	}
+	.skype_call1{
+		width:73px;
+		height:32px;
+		background:url(/plugins/skype/callbutton_32px1.png) no-repeat;
+		display:block;
+	}
+	.skype_chat1{
+		width:86px;
+		height:32px;
+		background:url(/plugins/skype/chatbutton_32px1.png) no-repeat;
+		display:block;
+	}
+	.skype_call,.skype_chat,.skype_call1,.skype_chat1{
+		float:left;
+		margin-right:20px;	
+		margin:10px 20px 0px 0px;
+	}
+</style>
+<div>
+	<!-- START BLOCK : list_skype --> <!-- END BLOCK : list_skype -->
+	<div style="border-bottom:solid 1px #CCC; font-weight:bold;">{name}</div>
+    
+	<a class="{skype_call}" href="skype:smartphonecentre?call" title="Call - {name}"><img border="0" alt="sky-Service Support" src="http://mystatus.skype.com/smallicon{nick}" style="float:left"></a>
+    <a class="{skype_chat}" href="skype:smartphonecentre?chat" title="Chat - {name}"><img border="0" alt="sky-Service Support" src="http://mystatus.skype.com/smallicon/{nick}" style="float:left"></a>
+    <div class="c10"></div>
+   
+    
+</div>

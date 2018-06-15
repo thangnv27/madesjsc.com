@@ -1,0 +1,7 @@
+User-agent: *
+Sitemap: http://f5store.vn/sitemap.xml
+Disallow: /-S
+Disallow: /addcart/*
+Disallow: /dich-vu/
+
+

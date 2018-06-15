@@ -1,0 +1,58 @@
+
+	# Power By Nguyen Binh
+	# suongmumc@gmail.com
+	
+	RewriteEngine on
+	RewriteBase /
+	RewriteCond %{HTTP_HOST} !^antien\.vn
+	RewriteRule (.*) http://antien\.vn/$1 [L,R=301]
+	RewriteRule ^manager/$ manager/admin.php
+	RewriteRule ^cart.html/$ index.php?page=cart&code=add
+	RewriteRule ^(.*)/$ index.php
+	
+	RewriteRule ^(.*)/(.*).html$ index.php	
+	ErrorDocument 404 http://www.antien.vn/index.php?page=404
+	redirect 301 /danh-muc-san-pham/sac-du-phong-momax/sac-du-phong-momax-ip31-2600.html /danh-muc-san-pham/sac-du-phong-momax/
+	redirect 301 /danh-muc-san-pham/sac-du-phong-momax/momax-ip25.html /danh-muc-san-pham/sac-du-phong-momax/
+    redirect 301 /danh-muc-san-pham/sac-du-phong-momax/sac-du-phong-momax-m2.html /danh-muc-san-pham/sac-du-phong-momax/
+	redirect 301 /danh-muc-san-pham/phu-kien-apple/tai-nghe-iphone-5.html /danh-muc-san-pham/phu-kien-apple/
+	redirect 301 /tin-tuc/bao-da-galaxy-s4-note-3.html /tin-tuc/
+	redirect 301 /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/loa-mini-aidika-xkd05.html /loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/
+	redirect 301 /addcart/tai-nghe-bluetooth-monster_39.html /danh-muc-san-pham/tai-nghe-beat/
+	redirect 301 /addcart/sac-tich-dien-momax-ipextra-ip33-6600mah_62.html /danh-muc-san-pham/sac-du-phong-momax/
+	redirect 301 /addcart/beats-bluetooth-monster_39.html /danh-muc-san-pham/tai-nghe-beat/
+	redirect 301 /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/loa-mini-aidika-xkd08.html /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/
+	redirect 301 /danh-muc-san-pham/loa-mini/loa-mini-aidika-xkd08.html /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/
+	redirect 301 /danh-muc-san-pham/loa-mini-aikadi/loa-min-beats-bs10.html /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/
+	redirect 301 /search/?keywords=loa+nghe+nh%E1%BA%A1c+bluetooth /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/
+	redirect 301 /search/?keywords=pin+d%E1%BB%B1+ph%C3%B2ng /danh-muc-san-pham/sac-du-phong-ssk/
+	redirect 301 /search/?keywords=s%E1%BA%A1c+pin+t%C3%ADch+%C4%91i%E1%BB%87n+%C4%91a+n%C4%83ng /danh-muc-san-pham/sac-du-phong-momax/
+	redirect 301 /danh-muc-san-pham/phu-kien-apple/sac-ipad.html  /danh-muc-san-pham/phu-kien-apple/
+	redirect 301 /danh-muc-san-pham/loa-mini-aidika/loa-mini-aidika-xkd02.html /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/
+	redirect 301 /danh-muc-san-pham/loa-mini-aikadi/loa-mini-beatspill.html /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/
+	redirect 301 /danh-muc-san-pham/loa-mini/loa-min-beats-bs10.html /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/
+	redirect 301 /danh-muc-san-pham/pin-du-phong-ssk/pin-du-phong-ssk-530.html /danh-muc-san-pham/sac-du-phong-ssk/sac-du-phong-ssk-530-10400-mah.html
+	redirect 301 /phu-kien-blackberry/cap-usb-blackberry/ /phu-kien-dien-thoai-khac/
+	redirect 301 /phu-kien-nokia/cap-usb-nokia/ /danh-muc-san-pham/phu-kien-nokia/
+	redirect 301 /danh-muc-san-pham/loa-mini-aidika/ /danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/
+	redirect 301 /bao-da-ipad-iphone/ /danh-muc-san-pham/bao-da-ipad-iphone-chinh-hang/
+	redirect 301 /danh-muc-san-pham/pin-du-phong-ssk/ /danh-muc-san-pham/sac-du-phong-ssk/
+	redirect 301 /danh-muc-san-pham/tai-nghe-beat/ /danh-muc-san-pham/tai-nghe-monster-beats-xin-gia-re-o-ha-noi-tphcm/
+	redirect 301 /danh-muc-san-pham/tai-nghe/ /danh-muc-san-pham/tai-nghe-monster-beats-xin-gia-re-o-ha-noi-tphcm/
+	redirect 301 /danh-muc-san-pham/tai-nghe-monster-beats-xin-gia-re-o-ha-noi-tphcm/tai-nghe-monster-beats-studio-fake-1-gia-re-tai-tphcm-va-ha-noi.html /danh-muc-san-pham/tai-nghe-monster-beats-xin-gia-re-o-ha-noi-tphcm/tai-nghe-monster-beats-studio-fake-1-gia-re-tphcm-va-ha-noi.html
+	redirect 301 /danh-muc-san-pham/phu-kien-apple/cu-sac-iphone.html /danh-muc-san-pham/phu-kien-apple/
+	redirect 301 /danh-muc-san-pham/sac-du-phong-ssk/pin-du-phong-ssk-519.html /danh-muc-san-pham/sac-du-phong-ssk/
+	redirect 301 /danh-muc-san-pham/tai-nghe-monster-beats-xin-gia-re-o-ha-noi-tphcm/tai-nghe-beats-toure-2013.html /danh-muc-san-pham/tai-nghe-monster-beats-xin-gia-re-o-ha-noi-tphcm/
+	redirect 301 /danh-muc-san-pham/bao-da-ipad-iphone-chinh-hang/op-vien-iphone-5-pro-frame.html /danh-muc-san-pham/bao-da-ipad-iphone-chinh-hang/
+	redirect 301 /danh-muc-san-pham/sac-du-phong-momax/sac-du-phong-momax-ipower32.html /danh-muc-san-pham/sac-du-phong-momax/
+	redirect 301 /tin-tuc/bao-da-ipad-op-iphone-momax.html /danh-muc-san-pham/bao-da-ipad-iphone-chinh-hang/
+
+	
+
+	
+	
+
+	
+	
+	
+	

@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{site_name}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+<meta http-equiv="Content-Language" content="vn" />
+<meta name="description" content="{site_description}" />
+<meta name="keywords" content="{site_keywords}" />
+<meta property="og:site_name" content="{site_name}" />
+<meta property="og:url" name="og:url" content="{siteurl}" data-app />
+<meta property="og:type" name="og:type" content="website" data-app />
+<meta property="og:description" name="og:description" content="{site_description}" data-app />
+<meta property="og:title" name="og:title" content="{site_name}" data-app />
+<meta property="og:image" name="og:image" content="{site_image}" data-app />
+<link href="{dir_path}/favicon.ico" rel="shortcut icon" />
+
+<link rel="stylesheet" type="text/css" href="{dir_path}/css/font-awesome-4.2.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="{dir_path}/css/style.php"/>
+<script src="{dir_path}/js/jquery-1.10.1.min.js"></script>
+<script src="{dir_path}/js/script.js"></script>
+<script src="{dir_path}/js/jquery.mmenu.min.all.js"></script>
+<script src="{dir_path}/js/player/jwplayer.js"></script>
+
+<script src="{dir_path}/js/jquery.form.min.js"></script>
+
+<script type="text/javascript">
+			$(function() {
+				$('nav#menu').mmenu();
+			});
+		</script>
+{toppage}
+<meta property="fb:app_id" content="374907509350129"/>
+
+
+<!--Start Sitelink Home-->
+<ul class='site-link-home' itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/dong-ho-thong-minh-smart-watch/">&#272;&#7891;ng h&#7891; thông minh</a></li>
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/pin-sac-du-phong-da-nang-chinh-hang-gia-re/">Pin sạc dự phòng</a></li>
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/danh-muc-san-pham/loa-mini-ket-noi-the-nho-khong-day-bluetooth-gia-re-nhat/">Loa mini Bluetooth</a></li>
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/danh-muc-san-pham/tai-nghe-monster-beats-xin-gia-re-o-ha-noi-tphcm/">Tai nghe Beats x&#7883;n</a></li>
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/danh-muc-san-pham/phu-kien-apple/">Phụ kiện Apple</a></li>
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/san-pham-ban-chay-1/">Sản phẩm bán chạy</a></li>
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/tin-tuc/">Tin công nghệ</a></li>
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/videos-1/">Video Review</a></li>
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/bao-hanh/">Quy &#273;&#7883;nh &#273;&#7893;i tr&#7843;</a></li>
+<li itemprop="name"><a itemprop="url" href="http://antien.vn/thanh-toan-va-giao-dich/">Thanh toán-Giao dịch</a></li>
+</ul>
+<!--The End Sitelink Home-->
+</head>
+<body>
+<div id="page">
+	<div class="content">
+	<div class="menubar" id="menubarfix">
+    	<div class="grid-menubar">
+        	<a href="#menu" class="main"><i class="fa fa-bars" style="font-size:18px;"></i></a>
+            <span class="text " style="text-transform:uppercase"><i class="fa fa-phone"></i> {message_top} <span class="hide-on-mobile">- <i class="fa fa-home"></i> {address_top}</span></span>
+        </div>
+    </div>
+    <div class="hide-on-mobile">
+    	<a href="{dir_path}/addcart/" class="btn-check-out"><i class="fa fa-shopping-cart fa-2x"></i> <strong id="countcart">(60)</strong> SP</a>
+    </div>
+<div class="header">
+	<div class="banner">
+    	<div class="grid-no-pad" style="position:relative">
+        	<div class="col-2-12 logo-site">
+            	{logo}
+            </div>
+            <div class="col-10-12 hide-on-mobile hide-small-screen">
+            	{banner}
+            </div>
+            <div class="menu-top hide-on-mobile">
+            	{menutop}
+            </div>
+            <div class="hotline-top hide-on-mobile"><i class="fa fa-phone"></i> {hotline}</div>
+            <div class="search-box hide-on-mobile">
+            	<form action="{dir_path}/search/" method="get" id="searchForm" style="padding:0px; margin:0px;">
+                	<input name="qr" type="text" class="txt-keyword" placeholder="Tìm kiếm...">
+                    <a href="#" class="btn-search" onClick="$('#searchForm').submit(); return false" ><i class="fa fa-search"></i></a>
+                </form>
+            </div>
+            <a href="#menu" class="ic-menu-mobile"><i class="fa fa-navicon"></i></a>
+            <a href="{dir_path}/addcart/" class="ic-menu-mobile ic-menu-mobile-cart"><i class="fa fa-shopping-cart"></i></a>
+            <div class="ic-menu-mobile ic-menu-mobile-search"><a href="#" style="display:inherit;color:#FFF; text-decoration:none;" id="show_mobile_search"><i class="fa fa-search"></i></a>
+            	<div class="mobile-search-form">
+                	<form action="{dir_path}/search/" id="mobileformsearch" method="get" style="padding:0px; margin:0px">
+                    	<input name="qr" type="text" class="txt-mobile-search" placeholder="Tìm kiếm..."><a href="#" onClick="$('#mobileformsearch').submit(); return false" class="btn-mobile-search fa fa-search"></a>
+                    </form>
+                    <script>
+                    	$('#show_mobile_search').click(function(){
+							$('.mobile-search-form').slideToggle();
+							return false;
+						});
+                    </script>
+                </div>
+            </div>
+            <div class="c"></div>
+        </div>
+    </div>
+</div>
+<div class="menubar hide-on-mobile" id="menubar">
+	<div class="grid-menubar">
+    	<ul id="nav">
+        	{menubar}
+           
+        </ul> <div style="clear:both"></div>
+    </div>
+</div>
+
+<div class="grid grid-pad">
+	<!-- START BLOCK : crumb -->
+	<div class="crumb hide-on-mobile"><a href="/"><i class="fa fa-home" style="color:#017d42; font-size:16px;"></i> Trang chủ</a> <i class="fa fa-angle-right"></i> {pathpage}</div>
+    <div class="c10"></div>
+    <!-- END BLOCK : crumb --> 
+
+

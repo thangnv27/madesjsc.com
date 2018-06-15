@@ -1,0 +1,29 @@
+<!-- START BLOCK : partner -->
+    <div class="c10"></div>
+    <div class="title-box">
+        <h2 class="text">{catname}</h2>
+    </div>
+    <div class="c10"></div>
+    <div class="box-border padding10">
+    	<ul id="flexiselDemo2"> 
+        	<!-- START BLOCK : list_partner -->
+            <li><a href="{link}" target="{target}">{image}</a></li>   
+            <!-- END BLOCK : list_partner -->
+        </ul>
+        <div class="c"></div>
+        <script type="text/javascript">
+
+$(window).load(function() {
+    $("#flexiselDemo2").flexisel({
+		visibleItems: 8,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+       
+    });
+});
+</script>
+    </div>
+    <!-- END BLOCK : partner -->

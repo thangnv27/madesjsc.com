@@ -1,0 +1,39 @@
+.sitemap{
+	line-height:20px;
+	padding-left:30px;	
+}
+.sitemap .home-page{
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:16px;
+}
+.sitemap a{
+	color:#333;
+	text-decoration:none;	
+}
+.sitemap a:hover{
+	text-decoration:underline;	
+}
+.sitemap ul{
+	padding:0px 0px 0px 19px;
+	margin:0;	
+}
+.sitemap li{
+	list-style:none;
+}
+
+.sitemap .level1{
+	font-weight:bold;
+	text-transform:uppercase;	
+} 
+.sitemap .level2{
+	font-weight:bold;
+	text-transform:none;
+}
+.sitemap .level3{
+	font-weight:normal;
+} 
+.sitemap .level4{
+	font-weight:normal;
+	font-style:italic;
+} 

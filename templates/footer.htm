@@ -1,0 +1,242 @@
+<div class="c20"></div>
+</div>
+<div class="footer">
+    <div class="grid" style="background:none; padding-left:20px;">
+        <div class="c10"></div>
+        {chantrang1}
+        <div class="c5"></div>
+        <div class="" >
+
+            <div class="col-1-4">                	
+                <div class="smo-footer">
+                    <div class="title-footer">{namecopyright}</div>
+                    <div class="c5"></div>
+                    <div style="line-height:18px">{copyright}</div>
+                    <div class="c5"></div>
+                    <div><i class="fa fa-home icon-cicle-footer-25"></i> {addresssupport}</div>
+                    <div class="c5"></div>
+                    <div>
+                        <i class="fa fa-phone icon-cicle-footer-25"></i>{hotline}
+                    </div>
+                    <div class="c5"></div>
+                    <div>
+                        <i class="fa fa-envelope-o icon-cicle-footer-25"></i>{emailsupport}
+                    </div>
+                    <div class="c10"></div>
+                    <div class="divline-footer " style="border-bottom:solid 1px #fff; border-top:solid 1px #ccc"></div>
+                    <div class="c10"></div>
+
+                </div>
+                <!--  --->
+            </div>
+            <div class="col-1-4">
+
+                <form action="/" method="post" id="news_letter_form" onSubmit="return check_null_newslater();">
+                    <input type="hidden" name="code" value="letter_add"/>
+                    <div class="box-newslater">
+                        <div class="title-footer">Nháº­n báº£n tin</div>
+                        <div class="c5"></div>
+
+                        <div class="col-2-3" style="padding-right:0px;"><input id="news_letter_textbox" name="news_letter_textbox" type="text" class="notNull" data-alert="*" placeholder="Nháº­p email nháº­n tin khuyáº¿n máº¡i.."></div>
+
+                        <div class="col-1-3" style="padding-right:0px;"><a onClick="$('#news_letter_form').submit();
+                                return false;" class="btn-newletter"  type="button" > Gá»­i </a></div>
+                        <div class="c"></div>
+                    </div>
+                </form>
+                <script>
+                    function check_null_newslater() {
+                        var ok = true;
+                        if ($('#news_letter_textbox').val() == '') {
+
+                            alert('Vui lÃ²ng nháº­p email cá»§a báº¡n');
+                            //$('#news_letter_textbox').focus();
+                            ok = false;
+
+                        }
+                        else {
+                            checkEmailLetter = $('#news_letter_textbox').val();
+                            if ((checkEmailLetter.indexOf('@') < 0) || ((checkEmailLetter.charAt(checkEmailLetter.length - 4) != '.') && (checkEmailLetter.charAt(checkEmailLetter.length - 3) != '.'))) {
+                                alert('Email khÃ´ng há»£p lá»‡ !');
+                                ok = false;
+                            }
+                            
+                        }
+                        return ok;
+                    }
+                </script>
+
+				<div class="c10"></div>
+               
+                    	{menuChinhsach}
+               
+
+{menuChinhsach}
+               
+
+            </div>
+            <div class="col-1-4">
+                <div><a href="#" target="_blank" rel="nofollow"><img alt="Ä‘Ã£ Ä‘Äƒng kÃ½ bá»™ cÃ´ng thÆ°Æ¡ng" src="{dir_path}/images/20150827110756-dathongba.png" width="100%" ></a></div>
+                <div class="smo-footer" style="padding-left:20px;">
+
+                    <a href="{facebook}" target="_blank" class="icon-cicle-footer fa fa-facebook fa-2x" style="background-color:#3b5998; color:#FFF"></a>
+                    <a href="{linkedin}" target="_blank" class="icon-cicle-footer fa fa-linkedin fa-2x" style="background-color:#1884BB; color:#FFF"></a>
+                    <a href="{twitter}" target="_blank" class="icon-cicle-footer fa fa-twitter fa-2x" style="background-color:#2b7bb9; color:#FFF"></a>
+                    <a href="{pinterest}" target="_blank" class="icon-cicle-footer fa fa-pinterest fa-2x" style="background-color:#cb2027; color:#FFF"></a>
+                    <a href="{youtube}" target="_blank" class="icon-cicle-footer fa fa-youtube fa-2x" style="background-color:#cb2027; color:#FFF"></a>
+                </div>
+            </div>
+            <div class="col-1-4 hide-on-mobile">
+                <div class="title-footer">{fanpagename}</div>
+                <div style="background:#FFF; width:100%; overflow:hidden">
+                    {fanpage}
+                </div>
+                <!--  --->
+            </div>
+            <div class="c10"></div>
+        </div>
+    </div>      
+    <div style="background:#333">
+        <div class="grid" style="background:none;">
+            <div class="col-1-1">
+                <div class="divline-footer hide-on-mobile" style="border-bottom:solid 1px #666; border-top:solid 1px #000"></div>
+                <div class="menu-bar-footer hide-on-mobile">
+                    {menufooter}
+
+
+<!-- Start Code  popup bên -->
+
+
+
+<!--The end Code popup -->
+
+                </div>
+				
+                <div class="divline-footer" style="border-bottom:solid 1px #666; border-top:solid 1px #000"></div>
+                <div style="color:#FFF; padding-top:10px;">{chantrang2}</div>
+                <div style="line-height:30px; color:#ccc; "><div style="padding-left:10px;">
+                        <div class="col-1-2">Copyright Â© 2015 F5store.vn. All rights reserved.</div>
+                        <div class="col-1-2" style="text-align:right;">
+
+                  
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/567f743b43462c597a65b5b7/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+                        </div>
+                    </div></div>
+            </div>
+
+        </div> <div class="c"></div>
+    </div>    
+
+
+    <a id="button-btt" href="#" title="Go to top" style="display: inline;"><i class="fa fa-caret-up"></i><br>Top</a>
+    {menumobile}
+</div>
+</div>
+<script>
+    $('#countcart').text('{quantity}');
+</script>
+
+<!--Start Chen mang xa hoi -->
+ 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d562834f75590"></script>
+
+<!--The End Chen mang xa hoi -->
+
+
+<!--Start Call Hot Line &#7903; d-->
+
+<script type="text/javascript">
+ jQuery(function($) {
+ $('body').append('<a style="display:none;" class="callus" href="tel:19006932 ">19006932 </a>');
+ var lastScrollTop = 0;
+ $(window).scroll(function(event){
+ var st = $(this).scrollTop();
+ if (st > lastScrollTop){
+ // downscroll code
+ $('a.callus').removeClass('display');
+ } else {
+ $('a.callus').addClass('display');
+ }
+ lastScrollTop = st;
+ });
+ });
+</script>
+
+<style type="text/css" media="screen and (max-width:767px)">
+ a.callus {
+ display: block !important;
+ position: fixed;
+ z-index: 9999;
+ bottom: 20px;
+ left: 20px;
+ background: #ED1B24 url(http://statics.vietmoz.info/img/ico/glyphicons/earphone-white.png) no-repeat;
+ background-position: 10px center;
+ background-size: 20px;
+ border-radius: 1000px;
+ padding: 5px 10px 5px 40px;
+ font-weight: 700;
+ font-size: 18px;
+ line-height: 30px;
+ color: #fff;
+ -webkit-transition: all 0.3s ease-in-out;
+ -moz-transition: all 0.3s ease-in-out;
+ -ms-transition: all 0.3s ease-in-out;
+ -o-transition: all 0.3s ease-in-out;
+ transition: all 0.3s ease-in-out;
+ -moz-transform: scale(0);
+ -webkit-transform: scale(0);
+ -o-transform: scale(0);
+ -ms-transform: scale(0);
+ transform: scale(0);
+ }
+ a.display.callus {
+ -webkit-transition: all 0.3s ease-in-out;
+ -moz-transition: all 0.3s ease-in-out;
+ -ms-transition: all 0.3s ease-in-out;
+ -o-transition: all 0.3s ease-in-out;
+ transition: all 0.3s ease-in-out;
+ -moz-transform: scale(1);
+ -webkit-transform: scale(1);
+ -o-transform: scale(1);
+ -ms-transform: scale(1);
+ transform: scale(1);
+ }
+</style>
+
+<!--Call End-->
+
+<!-- Google Code dành cho Th&#7867; ti&#7871;p th&#7883; l&#7841;i -->
+<!--------------------------------------------------
+Không th&#7875; liên k&#7871;t th&#7867; ti&#7871;p th&#7883; l&#7841;i v&#7899;i thông tin nh&#7853;n d&#7841;ng cá nhân hay &#273;&#7863;t th&#7867; ti&#7871;p th&#7883; l&#7841;i trên các trang có liên quan &#273;&#7871;n danh m&#7909;c nh&#7841;y c&#7843;m. Xem thêm thông tin và h&#432;&#7899;ng d&#7851;n v&#7873; cách thi&#7871;t l&#7853;p th&#7867; trên: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 865199617;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/865199617/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+</body>
+</html>

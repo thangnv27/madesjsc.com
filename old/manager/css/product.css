@@ -1,0 +1,36 @@
+/* CSS Document */
+
+
+#selectedlist{
+	float:left; width:360px; max-height:250px; overflow:auto;	
+}
+
+#selectlist{
+	float:right; width:380px;max-height:250px; overflow:auto;
+}
+#selectedlist ul,#selectlist ul{
+	padding:0px;
+	margin:0px;	
+}
+#selectedlist .title,#selectlist .title{
+	font-weight:bold;
+	text-transform:uppercase;
+	border-bottom:solid 1px #CCC;	
+	line-height:30px;
+	color:#1684CE;
+}
+#selectedlist ul li,#selectlist ul li{
+	list-style:none;
+	border-top:solid 1px #FFF;	
+	border-bottom:solid 1px #CCC;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+#selectedlist ul li .listname{
+	width:340px;
+	float:left;	
+}
+#selectedlist ul li .icondelete{
+	width:19px;
+	float:right;	
+}

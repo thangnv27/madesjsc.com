@@ -1,0 +1,142 @@
+<div class="col-9-12">
+	
+    <div class="col-1-1">
+    	
+        	<h2 class="title-cat">{catname}</h2>
+        
+        <div class="c10"></div>
+        <div>{contentcontact}</div>
+    </div>
+        <div class="col-5-12">
+        	<form action="{dir_path}/index4.php?page=contact&lang={lang}" method="post" id="contactform" onSubmit="return check_contact();">
+        <input type="hidden"  name="code" value="save" />
+        {message} 
+        
+        <!--START BLOCK : formBook-->
+        <div><em>Những trường có dấu * là trường bắt buộc phải nhập thông tin </em></div>
+        <div class="c10"></div>
+        <div><strong>Họ tên *:</strong></div>
+        <div><input name="yourname" type="text" class="txt-contact notNull"   id="yourname" data-alert="Bạn cần nhập vào họ tên !" /></div>
+        <div><strong>E-Mail*	: </strong></div>
+        <div><input name="email" type="text" class="txt-contact notNull"  id="email"  data-alert="Bạn cần nhập địa chỉ email" /></div>
+        <div><strong>Tiêu đề *: </strong></div>
+        <div><input name="subject" type="text" class="txt-contact notNull" data-alert="Bạn cần nhập tiêu đề !" id="subject" /></div>
+        <div><strong>Nội dung *:</strong></div>
+        <div><textarea name="other_request" rows="5" style="height:150px;" class="txt-contact notNull" data-alert="Emter your message !" id="other_request"></textarea></div>
+        <div><strong>Captcha *: </strong><input name="sercurity" type="text" id="sercurity" style="width:100px" data-alert="Bạn cần nhập captcha !" class="txt-contact notNull" />
+              <img src="{dir_path}/lib/imagesercurity.php" name="imgCaptcha" align="absmiddle" id="imgCaptcha" /></div>
+         <div><input name="input" type="button" onClick="$('#contactform').submit()" class="btn-send" value="Gửi" /></div>
+         
+        <!--END BLOCK : formBook-->
+        	</form>
+        </div>
+        <div class="col-7-12">
+        	<div style="border:solid 1px #CCC; height:400px" id="map"></div>
+         </div>
+    	<div class="c20"></div>
+        <div style="border-top:solid 1px #CCC; padding-top:10px">{catcontent}</div>
+        <div class="c20"></div>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+        <script>
+                          var infowindow = new google.maps.InfoWindow({ size: new google.maps.Size(150, 50) });
+                            var map;
+                            var latidude;
+                            var longtidude;
+                            var title;
+                            title = '<div style="width:250px; min-height:50px;"><h2 style="font-size:12px; text-transform:uppercase; padding0px; margin:0px; padding-bottom:5px">{title}</h2><div>{address}</div></div>';
+    
+                            function initializeMaps() {
+    
+                                var latlng = new google.maps.LatLng({latitude}, {longitude});
+                                var myOptions = {
+                                    zoom: 12,
+                                    center: latlng,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                };
+    
+                                map = new google.maps.Map(document.getElementById("map"), myOptions);
+                                createMarkerMaps(latlng, title);
+    
+                            }
+    
+                            function createMarkerMaps(latlng, html) {
+    
+                                var contentString = html;
+                                var marker = new google.maps.Marker({
+                                    position: latlng,
+                                    map: map,
+                                    zIndex: Math.round(latlng.lat() * -100000) << 5
+    
+                                });
+    
+    
+                                infowindow.setContent(contentString);
+                                infowindow.open(map, marker);
+    
+                                google.maps.event.addListener(marker, 'click', function () {
+                                    infowindow.setContent(contentString);
+                                    infowindow.open(map, marker);
+                                });
+    
+                            }
+                          google.maps.event.addDomListener(window, 'load', initializeMaps);
+                        </script> 
+      </div>
+      
+    <script type="text/javascript">
+    $(function(){
+        $('.notNull').change(function(){
+            check_contact();
+        });
+    });
+    function check_contact(){
+        ok= true;
+        $('#contactform .error').remove();
+        $('#contactform .notNull').each(function(){
+            if($(this).val()==''){
+                if($(this).attr('id')=='sercurity'){
+                    $("<div class='error'>&nbsp; " + $(this).attr('data-alert') + "</div>").insertAfter($('#imgCaptcha')); 	
+                }else{
+                    $("<div class='error'>&nbsp; " + $(this).attr('data-alert') + "</div>").insertAfter($(this)); 	
+                    ok=false;
+                }
+            }
+        });	
+    
+    
+        if($("#contactform #email").val()!=''){
+            checkEmail = $('#contactform #email').val();
+            if ((checkEmail.indexOf('@') < 0) || ((checkEmail.charAt(checkEmail.length-4) != '.') && (checkEmail.charAt(checkEmail.length-3) != '.'))) {
+                $("<span class='error'> *  </span>").insertAfter($("#contactform #email")); 
+                ok= false;
+            } else{
+                $("#contactform #email").text("");
+            };
+        }	
+    
+    
+        if (ok==true){
+            $('#contactform').ajaxForm({
+                beforeSubmit: function(a,f,o) {
+                    $('#contactform').fadeTo('fast',0.3);
+                    $('.waiting').show();
+                    o.dataType = 'html';
+                },
+    
+                success: function(data) {
+                    $('#contactform').fadeTo('fast',1);
+                    $('.waiting').hide();
+                    var str1 = data;
+                    var str2 = "CAPTCHA";
+                    if(str1.indexOf(str2) == -1){
+                        $('#contactform')[0].reset();
+                    }				
+                    alert(data);
+                    clearForm: true;
+                }
+            });	
+        }
+        return ok;
+    }
+    
+    </script> 

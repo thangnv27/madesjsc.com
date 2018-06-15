@@ -1,0 +1,32 @@
+<!-- START BLOCK : show_slideshow -->
+<div class="col-1-1" >
+        	<div class="box-slide hide-on-mobile">
+            	<section class="slider">
+                    <div class="flexslider">
+                      <ul class="slides">
+                      <!-- START BLOCK : list_slide -->
+                        <li>
+                             <a href="{link}" target="{target}">{image}</a>
+                            </li>
+                      <!-- END BLOCK : list_slide -->       
+                      </ul>
+                    </div>
+                  </section>
+                  <script defer src="js/jquery.flexslider.js"></script>
+
+				  <script type="text/javascript">
+                    
+                    $(window).load(function(){
+                      $('.flexslider').flexslider({
+                        animation: "slide",
+                        start: function(slider){
+                          $('body').removeClass('loading');
+                        }
+                      });
+                    });
+                  </script>
+            </div>		
+           
+            <div class="c20 hide-on-mobile"></div>
+        </div>
+<!-- END BLOCK : show_slideshow -->

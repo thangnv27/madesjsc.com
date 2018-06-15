@@ -1,0 +1,725 @@
+<div class="col-9-12">
+	
+
+    <div>
+					<table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse; font-family: Arial; font-size: 10pt;' bordercolor="#9999CC" width='100%' >				
+
+						<tr>
+
+							<td width="100%" align="center">
+
+<!-- START BLOCK : giohang -->
+		  <table border='0' cellspacing='0' cellpadding='2' width='100%' align='center'>
+		  <form method='POST' action='{dir_path}/update_cat.html' name='checkoutform'>
+			<tr> 
+
+			  <td align='center'>		
+				<table  cellpadding='5' cellspacing='0'  width='100%' class="cart" style="border-collapse:collapse; border:solid 1px #CCC !important" >
+
+				  <tr>
+				    <td width="41%" align="center" bgcolor="#EDEDED"><b>Sản phẩm</b></td>
+
+					<td width='17%' align='center' bgcolor="#EDEDED"><b>Giá</b></td>
+
+					<td width='11%' align='center' bgcolor="#EDEDED"><b>Số lượng</b></td>
+
+					<td width='23%' align='center' bgcolor="#EDEDED"><b>Tổng</b></td>
+
+					<td width='8%' style="text-align:center" bgcolor="#EDEDED"><b>Xóa</b></td>
+				  </tr>		
+
+<!-- START BLOCK : giohang_row -->
+
+              <tr height='30'>
+                <td><a href="{link_detail}" target="_blank" class="hide-on-mobile">{giohang_image}</a><a href="{link_detail}" class="vtip" title="View product" target="_blank">{giohang_name}</a></td>
+
+				                          <td align='center'><strong>{giohang_price} VNĐ&nbsp;{donvitinh}</strong></td>
+
+				                          <td align='center'><input type='text' name='quant{giohang_id}' value='{giohang_soluong}' style="text-align:center; width:50px;"></td>
+
+				<td align='right'><strong>{giohang_tongtien}&nbsp;VNĐ</strong></td>
+
+				<td  style="text-align:center"><input type='checkbox' name='del{giohang_id}' value='1' class='noborder'></td>
+			  </tr>
+
+
+
+<!-- END BLOCK : giohang_row -->
+
+				  <tr>
+				    <td>&nbsp;</td>
+
+								<td align='right' colspan='2'><b>Tổng thanh toán:</b></td>
+
+					<td align='right'><font color="#ff0000"><b>{giohang_tongcong} <strong>VNĐ</strong></b></font></td>
+
+					<td style="text-align:center"><a href='javascript:document.checkoutform.submit()' class="vtip" title="Delete selected" style="text-decoration:none"><i class="icon-trash" style="margin-right:5px;"></i><b>Xóa</b></a></td>
+				  </tr>
+
+			  <tr height='30'>
+
+				<td colspan='5' align="center">
+					  <div align="center">  <input type="button" name="Button" value="Chon tiếp sản phẩm khác" onclick="history.back();" class="btn-cart-1" />					 
+					  <input type="button" name="Button2" value="Cập nhật số lượng"  onclick="document.checkoutform.submit()" class="btn-cart-2"/>
+                     
+					    <input type="button" name="Submit2" value="Đặt hàng" onclick="window.location='{dir_path}/cart_checkout.html'" class="btn-cart-3"/>					
+                        
+					  </div>
+                 </td>
+			  </tr>				  
+				</table>			  
+              </td>
+			</tr>
+
+		</form>			
+		  </table>
+<!-- END BLOCK : giohang -->							
+
+<!-- START BLOCK : message -->
+				<table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse; font-family: Arial; font-size: 10pt; color: #000080' bordercolor="#9999CC" width='100%'>
+
+				  <tr>
+
+				  	<td align='center'>{msg}</td>
+				  </tr>
+				 </table>
+
+<!-- END BLOCK : message -->
+
+<!-- START BLOCK : formuserorder -->
+
+<script Language='JavaScript'>
+
+function checkform1(frm)
+
+{
+
+	if(frm.username.value=='')
+
+	{
+
+		alert('{_enterusername}');
+
+		frm.username.focus();
+
+		return (false);	
+
+	}
+
+	if(frm.password.value=='')
+
+	{
+
+		alert('{_enterpassword}');
+
+		frm.password.focus();
+
+		return (false);	
+
+	}
+
+}
+
+
+
+</script>
+
+	<!--
+
+	<p align="center">{msg}</p>
+
+	
+
+				<table  cellpadding='3' cellspacing='0' class="cart" bordercolor="#ccc" width='100%'>
+
+					<form method='POST' action='index.php?page=cart&code=checkout1' name='frmorder1' onsubmit='return checkform1(this)'>
+
+	
+
+	  	<tr>
+
+			<td colspan=2 align='left' bgcolor="#EDEDED" class="header2"><strong>Đăng nhập</strong></td>
+		</tr>				  
+
+	  	<tr>
+
+			<td align='left' colspan=2><font >{_useralreadyofwebsite}</font></td>
+		</tr>				
+
+				
+
+				
+
+        <tr> 
+
+          <td align="left" ><font color='#ff0000'>*</font> <font color='#ff0000'>&nbsp;</font>{_username}: </td>
+
+		  <td width='73%' align="left"><input name='username' type='text' id="username" style="width:200px; border:solid 1px #C0C0C0"></td>
+		 </tr>
+
+  
+        <tr> 
+
+          <td align="left"><font color='#ff0000'>*</font> <font color='#ff0000'>&nbsp;</font>{_password}: </td>
+
+		  <td align="left"><input name='password' type='password' style="width:200px; border:solid 1px #C0C0C0"></td>
+		 </tr>		 
+
+  
+        <tr> 
+
+			<td colspan="2" align="center"><input type='submit' value='{_login}' class="btn btn-primary"></td>
+		  </tr>	
+		 </form>	
+	</table>
+
+	
+
+
+
+<br>
+-->
+<script Language='JavaScript'>
+
+function checkform(frm)
+
+{
+
+	if(frm.username.value=='')
+
+	{
+
+		alert('{_enterusername}');
+
+		frm.username.focus();
+
+		return (false);	
+
+	}
+	if(frm.name.value=='')
+
+	{
+
+		alert('{_entername}');
+
+		frm.name.focus();
+
+		return (false);	
+
+	}
+
+	if(frm.tel.value=='')
+
+	{
+		alert('{_enterphonenumber}');
+
+		frm.tel.focus();
+
+		return (false);	
+	}
+
+	if(frm.email.value=='')
+
+	{
+		alert('{_enteremail}');
+		frm.email.focus();
+		return (false);	
+	}
+
+	if(frm.address.value=='')
+	{
+		alert('{_enteraddress}');
+
+		frm.address.focus();
+
+		return (false);	
+	}
+}
+</script>
+<form method='POST' action='index.php?page=cart&code=procheckout' name='frmorder2' id="frmorder2" onsubmit='return check_null_input()'>	
+				<table  cellpadding='3' cellspacing='0'  class="cart" bordercolor="#eee" width='99%' style="margin:3px; border:solid 1px #CCC" >
+
+				
+
+	  	<tr>
+	  	  
+	  	  <td colspan='2' align='left' bgcolor="#EDEDED"  class="header2"><strong>Thông tin người đặt hàng</strong></td>
+	  	  </tr>		  
+
+	  	<tr>
+	  	  <td align="left" ><font color='#ff0000'>*</font> Họ tên:</td>
+	  	  <td width="73%" align="left"><input name='name' type='text' id="name" style="width:200px; border:solid 1px #C0C0C0" /></td>
+	  	  </tr>
+         
+         <tr> 
+           
+           <td align="left" >&nbsp; Điện thoại: </td>
+           
+           <td align="left"><input name='phone' id='phone' type='text' style="width:200px; border:solid 1px #C0C0C0"></td>
+         </tr>		
+
+   
+        <tr> 
+
+          <td align="left" ><font color='#ff0000'>*</font> Email: </td>
+
+		  <td align="left">
+
+          <input name='email' id='email1' type='text' style="width:200px; border:solid 1px #C0C0C0"></td>
+		 </tr>
+
+  
+        <tr> 
+
+          <td align="left" ><font color='#ff0000'>*</font>Địa chỉ: </td>
+
+		  <td align="left">
+
+          <input name='address' id='address' type='text' style="width:500px; border:solid 1px #C0C0C0"></td>
+		 </tr>	
+
+  	 
+        <tr> 
+          
+          <td align="left"  valign='top'>Yêu cầu: </td>
+          
+          <td align="left"><textarea name='addinfo' id='addinfo' rows='5' style="width:500px; border:solid 1px #C0C0C0"></textarea></td>
+        </tr>		
+
+				
+
+	  	<tr>
+	  	  
+	  	  <td colspan='2' align='left' bgcolor="#EDEDED"  class="header2"><strong>Thông tin / Địa chỉ giao hàng</strong></td>
+	  	  </tr>		  
+
+	  	<tr>
+	  	  <td colspan="2" align="left" ><label class="checkbox"><input type="checkbox" name="get_info" id="get_info" />
+	  	    Lấy thông tin người đặt hàng</label></td>
+	  	  </tr>
+	  	<tr>
+	  	  <td align="left" ><font color='#ff0000'>*</font> Họ tên:</td>
+	  	  <td width="73%" align="left"><input name='g_name' type='text' id="g_name" style="width:200px; border:solid 1px #C0C0C0" /></td>
+	  	  </tr>
+         
+         <tr> 
+           
+           <td align="left" ><font color='#ff0000'>*</font>&nbsp; Điện thoại: </td>
+           
+           <td align="left"><input name='g_phone' id='g_phone' type='text' style="width:200px; border:solid 1px #C0C0C0"></td>
+         </tr>		
+
+   
+        <tr> 
+
+          <td align="left" ><font color='#ff0000'>*</font> Email: </td>
+
+		  <td align="left">
+
+          <input name='g_email' id="g_email" type='text' style="width:200px; border:solid 1px #C0C0C0"></td>
+		 </tr>
+
+  
+        <tr> 
+
+          <td align="left" ><font color='#ff0000'>*</font> Địa chỉ: </td>
+
+		  <td align="left">
+
+          <input name='g_address' id="g_address" type='text' style="width:500px; border:solid 1px #C0C0C0"></td>
+		 </tr>	
+
+  	 
+        <tr> 
+
+          <td align="left"  valign='top'>Yêu cầu: </td>
+
+		  <td align="left"><textarea name='g_addinfo' id="g_addinfo" rows='5' style="width:500px; border:solid 1px #C0C0C0"></textarea></td>
+		 </tr>		
+
+  
+        <tr> 
+
+		  <td colspan='2' align='center'><input type='submit' value='{_ok}'  class="btn btn-primary"></td>
+		 </tr>		
+		
+	</table>
+ </form>	
+	
+
+	      <table border='0' cellspacing='0' cellpadding='0' width='95%' align='center'>
+
+	  	<tr>
+
+			<td align='center'><font color="#333">{_fullinfomation}</font> 
+
+            </td>
+		</table>		
+
+		<br>
+
+<script Language='JavaScript' type="text/javascript">
+function check_null_input(){
+	if($('#frmorder2 #name').val()=='')	{
+		alert('Bạn phải nhập vào họ tên !')	;
+		$('#frmorder2 #name').focus();
+		return false;
+	}
+	if($('#frmorder2 #phone').val()=='')	{
+		alert('Bạn phải nhập vào số điện thoại liên hệ !')	;
+		$('#frmorder2 #phone').focus();
+		return false;
+	}
+	if($('#frmorder2 #phone').val())
+	{
+	
+  	var checkOK = '0123456789.';
+  	var checkStr = $('#frmorder2 #phone').val();
+  	var allValid = true;
+	  	for (i = 0;  i < checkStr.length;  i++)
+	  	{
+	    	ch = checkStr.charAt(i);
+	    	for (j = 0;  j < checkOK.length;  j++)
+	     		if (ch == checkOK.charAt(j)) break;
+	    	if (j == checkOK.length)
+	   		{
+	     		allValid = false;
+	      		break;
+	    	}
+	  	}
+	}
+	if(allValid==false){
+		alert("Số điện thoại không đúng !");
+		$('#frmorder2 #phone').focus();
+		return false;
+	}
+	if($('#frmorder2 #email1').val()=='')	{
+		alert('Bạn phải nhập vào địa chỉ email !')	;
+		$('#frmorder2 #email1').focus();
+		return false;
+	}
+	  if($("#frmorder2 #email1").val()!=''){
+			checkEmail = $('#frmorder2 #email1').val();
+			if ((checkEmail.indexOf('@') < 0) || ((checkEmail.charAt(checkEmail.length-4) != '.') && (checkEmail.charAt(checkEmail.length-3) != '.'))) {
+			   alert("Địa chỉ email không đúng");
+			   $('#frmorder2 #email1').focus();
+ 			   return false;
+			} 
+		}
+		if($('#frmorder2 #address').val()=='')	{
+			alert('Bạn phải nhập vào địa chỉ !')	;
+			$('#frmorder2 #address').focus();
+			return false;
+		}
+}
+$(function(){
+	$('#get_info').change(function(){
+		if($('#get_info').attr('checked')=='checked'){
+			$('#g_name').attr('value',$('#name').val())	;
+			$('#g_phone').attr('value',$('#phone').val())	;
+			$('#g_email').attr('value',$('#email1').val());
+			$('#g_address').attr('value',$('#address').val());
+			$('#g_addinfo').attr('value',$('#addinfo').val());
+		}else{
+			$('#g_name').attr('value','');
+			$('#g_phone').attr('value','');
+			$('#g_email').attr('value','');
+			$('#g_address').attr('value','');
+			$('#g_addinfo').attr('value','');
+		}
+		
+	});
+});
+</script>
+
+
+
+<!-- END BLOCK : formuserorder -->
+
+<!-- START BLOCK : formorderreg -->
+
+<script Language='JavaScript' type="text/javascript">
+function checkform(frm)
+{
+	if(frm.name.value=='')
+	{
+		alert('{_entername}');
+		frm.name.focus();
+		return (false);	
+	}
+	if(frm.tel.value=='')
+	{
+		alert('{_enterphonenumber}');
+		frm.tel.focus();
+		return (false);	
+
+	}
+	if(frm.email.value=='')
+	{
+		alert('{_enteremail}');
+		frm.email.focus();
+		return (false);	
+	}
+	if(frm.address.value=='')
+	{
+		alert('{_enteraddress}');
+		frm.address.focus();
+		return (false);	
+	}
+}
+
+
+
+</script>
+
+	
+
+	<form method='POST' action='index.php?page=cart&code=procheckout' name='frmorder' onsubmit='return checkform(this)'>
+
+      				<table border='0' cellpadding='0' cellspacing='0' class="cart" bordercolor="#ccc" width='100%' >
+
+	  	<tr>
+
+			<td height="25" colspan='2' align='left' bgcolor="#EDEDED" class="header2"><strong>Thông tin khách hàng</strong></td>
+		  
+
+        
+
+		 <tr>
+		   <td align="left" ><font color='#ff0000'>*</font>Họ tên:</td>
+		   <td width="73%" align="left"><input name='name' type='text' id="name" value='{name}' style="width:200px; border:solid 1px #C0C0C0" /></td>
+		   </tr>
+         <tr> 
+           
+           <td align="left" >&nbsp;Điện thoại: </td>
+           
+           <td align="left"><input name='phone' type='text' value='{phone}' style="width:200px; border:solid 1px #C0C0C0"></td>
+         </tr>		
+
+		 <tr> 
+		   
+		   <td align="left" ><font color='#ff0000'>*</font>Email: </td>
+		   
+		   <td align="left">
+		     
+		     <input name='email' type='text' value='{email}' style="width:200px; border:solid 1px #C0C0C0"></td>
+		   </tr>
+
+		 <tr> 
+		   
+		   <td align="left" ><font color='#ff0000'>*</font>Địa chỉ: </td>
+		   
+		   <td align="left">
+		     
+		     <input name='address' type='text' value='{address}' style="width:200px; border:solid 1px #C0C0C0"></td>
+		   </tr>	
+
+		 <tr> 
+		   
+		   <td align="left"  valign='top'>Yêu cầu: </td>
+		   
+		   <td align="left"><textarea name='addinfo' rows='8' style="width:300px; border:solid 1px #C0C0C0"></textarea></td>
+		   </tr>		
+
+		  <tr> 
+		    
+		    <td colspan='2' align='center'><input type='submit' value='Chấp nhận'  class="btn btn-primary"></td>
+		    </tr>		
+	</table>
+	</form>
+
+	      <table border='0' cellspacing='0' cellpadding='0' width='99%' align='center'>
+
+	  	<tr>
+
+			<td align='center'><font color="#333"></font></td>
+		</table>		
+
+		<br>
+
+
+
+<!-- END BLOCK : formorderreg -->
+
+<!-- START BLOCK : orderuser -->
+
+<table  cellpadding='3' class="cart" cellspacing='0'  bordercolor="#ccc" width='99%' style="border:solid 1px #CCC; margin:3px;">
+	<tr>
+	  <td colspan='2' align="left" bgcolor="#EDEDED" class="header2"><strong >Thông tin khách hàng</strong></td>
+	  </tr>
+	<tr>
+	  <td width='200' align="left">Họ tên:</td>
+	  <td width='500' align="left">{cusname}</td>
+	  </tr>
+	<tr>
+	  <td width='200' align="left">Điện thoại:</td>
+	  <td align="left">{cusphone}</td>
+	  </tr>	
+	<tr>
+		<td width='200' align="left">Email:</td>
+		<td align="left">{cusemail}</td>
+	</tr>	
+	<tr>
+		<td width='200' align="left">Địa chỉ:</td>
+
+		<td align="left">{cusaddress}</td>
+	</tr>	
+
+	<tr>
+
+		<td width='200' align="left" valign='top'>Yêu cầu:</td>
+
+		<td align="left">{cusaddinfo}</td>
+	</tr>	
+    <tr>
+	  <td colspan='2' align="left" bgcolor="#EDEDED" class="header2"><strong >Thông tin / Địa chỉ giao hàng</strong></td>
+	  </tr>
+	<tr>
+	  <td width='200' align="left">Họ tên:</td>
+	  <td width='500' align="left">{g_cusname}</td>
+	  </tr>
+	<tr>
+	  <td width='200' align="left">Điện thoại:</td>
+	  <td align="left">{g_cusphone}</td>
+	  </tr>	
+	<tr>
+		<td width='200' align="left">Email:</td>
+		<td align="left">{g_cusemail}</td>
+	</tr>	
+	<tr>
+		<td width='200' align="left">Địa chỉ:</td>
+
+		<td align="left">{g_cusaddress}</td>
+	</tr>	
+
+	<tr>
+
+		<td width='200' align="left" valign='top'>Yêu cầu:</td>
+
+		<td align="left">{g_cusaddinfo}</td>
+	</tr>	
+	</table>
+
+	<br>
+<!-- END BLOCK : orderuser --> 
+
+		  <table border='0' cellspacing='0' cellpadding='0' width='99%' align='center' style="margin:3px">
+
+			<tr> 
+
+			  <td align='center'>		
+
+				<table class="cart" border='0' cellpadding='5' cellspacing='0' bordercolor="#ccc" width='100%' >
+
+				  <tr>
+				    <td colspan="4" align="left" ><strong>Giỏ hàng</strong></td>
+				    </tr>
+				  <tr>
+				    <td width="33%" align="left" bgcolor="#EDEDED" ><b>Sản phẩm</b></td>
+
+					<td  width='21%' align='center' bgcolor="#EDEDED"><b>Giá</b></td>
+
+					<td  width='15%' align='center' bgcolor="#EDEDED"><b>Số lượng</b></td>
+
+					<td  width='25%' align='center' bgcolor="#EDEDED"><b>Tổng</b></td>
+				  </tr>		
+
+<!-- START BLOCK : orderprod_row -->
+
+              <tr height='30'>
+                <td align="left"><a href="{link_detail}" target="_blank">{giohang_image}</a><a href="{link_detail}" target="_blank">{giohang_name}</a></td>
+
+            <td align='center'><strong>{giohang_price}&nbsp;{donvitinh} VNĐ</strong></td>
+
+                      <td align='center'><strong>{giohang_soluong}&nbsp;</strong></td>
+
+										<td align='right'><strong>{giohang_tongtien}&nbsp;VNĐ</strong></td>
+			  </tr>
+
+
+
+<!-- END BLOCK : orderprod_row -->
+
+			<!-- START BLOCK : tongcong -->
+
+
+
+				  <tr>
+				    <td>&nbsp;</td>
+
+								<td align='right' colspan='2'>
+
+                          <b>Tổng thanh tóa:</b></td>
+								<td align="right" ><strong>{giohang_tongcong}&nbsp;VNĐ</strong></td>
+					                    </tr>
+
+			<!-- END BLOCK : tongcong -->
+				</table>			  </td>
+			</tr>
+
+		<tr>
+
+			                      <td width='100%'>&nbsp; </td>
+		</tr>				
+		  </table>
+
+
+			<!-- START BLOCK : chuaxacnhan -->
+
+			<center>
+
+                                <p>
+
+                                <font color="#FF0000">								</font>                                </p>
+</center>
+
+				
+
+<form method='POST' action='index.php?page=cart&code=procheckout1' name='frmorder9'>
+<input type='hidden' name='username' value='{frm_username}'>
+<input type='hidden' name='name' value='{frm_name}'>
+<input type='hidden' name='password' value='{frm_password}'>
+<input type='hidden' name='tel' value='{frm_tel}'>
+<input type='hidden' name='phone' value='{frm_phone}'>
+<input type='hidden' name='email' value='{frm_email}'>
+<input type='hidden' name='address' value='{frm_address}'>
+<input type='hidden' name='addinfo' value='{frm_addinfo}'>
+<input type='hidden' name='miss' value='{frm_password}'>
+
+
+<input type='hidden' name='g_phone' value='{frm_g_phone}'>
+<input type='hidden' name='g_name' value='{frm_g_name}'>
+<input type='hidden' name='g_email' value='{frm_g_email}'>
+<input type='hidden' name='g_address' value='{frm_g_address}'>
+<input type='hidden' name='g_addinfo' value='{frm_g_addinfo}'>
+
+
+
+<input type='submit' value='Đặt hàng'  class="btn btn-primary">
+</form>			
+
+			<!-- END BLOCK : chuaxacnhan -->
+
+			<!-- START BLOCK : daxacnhan -->
+
+			<center>
+
+                                <font color="#333" size="2">Đơn hàng cuẩ bạn đã được gửi đi, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất. <br />Cảm ơn bạn !<br>
+
+								&nbsp;</font></center>
+
+								
+
+							<!--	<meta http-equiv='refresh' content='3; url=?'>-->
+							{redir}
+
+			<!-- END BLOCK : daxacnhan -->
+
+<!-- END BLOCK : orderprod -->	
+		  				</td>
+			  			</tr>
+			  		</table>	
+          
+          </div>
+    <div class="c10"></div>
+</div>

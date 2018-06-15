@@ -1,0 +1,57 @@
+<div style="padding-right:5px;">
+	<div class="crumb"><a href="{dir_path}/">Trang chủ</a> > {pathpage}</div>
+    <div class="boderpage" >
+    
+	<!-- START BLOCK : news -->
+    <h1 class="titlepage">{catname}</h1>
+    <div style="padding:10px">
+    	<div>{catcontent}</div>
+	    <div class="c5"></div>
+	    <!-- START BLOCK : list_news -->
+        <div class="itemnews">
+			<a href="{link_detail}">{image}</a><h2 class="name"><a href="{link_detail}">{name}</a></h2>
+            {createdate}
+            <div class="intro">{intro}</div>
+            <div class="viewdetail"><a href="{link_detail}">Chi tiết</a></div>
+            <div class="c"></div>
+        </div>    
+        <div class="c10"></div>
+        <!-- END BLOCK : list_news -->
+    </div>
+    <div class="paging">{pages}</div>
+     <div class="c10"></div>
+    <!-- END BLOCK : news -->
+    <!-- START BLOCK : detailNews -->
+    <h2 class="titlepage">{catname}</h2>
+    <div style="padding:5px;">
+    	<h1 class="itemNameh1">{name}</h1>
+        {createdate}
+        <h2 class="introDetail">{intro}</h2>
+        <div>{content}</div>
+        <div class="c10"></div>
+        <!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style ">
+			<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+			<a class="addthis_button_tweet"></a>
+			<a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+			<a class="addthis_counter addthis_pill_style"></a>
+			</div>
+			<!-- AddThis Button END -->
+        <div class="c10"></div>
+    </div>
+    <div>    
+        <h2 class="titlepage">Các bài khác</h2>
+        <div class="c5"></div>
+        <ul class="otherarticle">
+        	<!-- START BLOCK : newest -->
+        	<li><a href="{link_detail}">{name}</a>{createdate}</li>
+            <!-- END BLOCK : newest -->
+            <!-- START BLOCK : old -->
+        	<li><a href="{link_detail}">{name}</a>{createdate}</li>
+            <!-- END BLOCK : old -->
+        </ul>
+    </div>
+    <!-- END BLOCK : detailNews -->
+    </div>
+</div>
+</div>

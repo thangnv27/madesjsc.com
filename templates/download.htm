@@ -1,0 +1,86 @@
+<div class="leftcol">
+    <div class="border-ccc">
+        <div class="crumb"><a href="/">Trang chủ{_home}</a> \ {pathpage} </div>    
+        <div class="c"></div>
+
+	    <div class="c"></div>
+
+	    <div class="borderboxgray" style="padding:10px; position:relative" id="boxdownload">
+
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabledownload">
+
+			  <tr class="titledownload">
+
+			    <th class="first" width="30px">STT</th>
+
+			    <th>Tên tài liệu</th>
+
+			    <th width="332">Mô tả</th>
+
+			    <th class="last" width="98">Download</th>
+
+			  </tr>
+
+			  <tr class="tr" style="display:none;">
+
+			    <td align="center">01</td>
+
+			    <td>&nbsp;</td>
+
+			    <td>&nbsp;</td>
+
+			    <td>&nbsp;</td>
+
+			  </tr>
+
+              <!-- START BLOCK : listDownload -->
+
+              <tr class="tr">
+
+			    <td align="center">01</td>
+
+			    <td>{name}</td>
+
+			    <td>{intro}</td>
+
+                            <td>
+                                <a href="{link_download}" rel="{id}" target="_blank" class="icondownload">Download</a>
+                            </td>
+
+			  </tr>
+
+              <!-- END BLOCK : listDownload -->
+
+			  
+
+			</table>
+
+        </div>
+
+        <script>
+
+        	$(function(){
+/*
+				$('.tabledownload a.icondownload').click(function(){
+					$('#boxdownload').append('<div class="loading"></div>');
+					$.ajax({
+					   type: "GET",
+					   url: "{dir_path}/index4.php",
+					   data: "page=download&code=download&id=" + $(this).attr('rel'),
+					   success: function(msg){
+				        $('#boxdownload .loading').remove();
+
+				      }
+
+					 });
+
+					 return false;
+
+				})
+
+			});
+*/
+        </script>
+
+</div></div>    
+

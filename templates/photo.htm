@@ -1,0 +1,57 @@
+<script type="text/javascript" src="{dir_path}/highslide/highslide-with-gallery.js"></script>
+<link rel="stylesheet" type="text/css" href="{dir_path}/highslide/highslide.css" />
+<script type="text/javascript">
+hs.graphicsDir = '{dir_path}/highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+hs.dimmingOpacity = 0.75;
+
+hs.addSlideshow({
+	interval: 5000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: 0.75,
+		position: 'bottom center',
+		hideOnMouseOut: true
+	}
+});
+</script>
+<div class="col-9-12">
+   
+    <h1 class="title-cat"><a href="{catlink}">{catname}</a></h1>
+    	 <div>{catcontent}</div>
+	    <div class="c20"></div>
+    	<!-- START BLOCK : album -->
+        <div>
+        	<!-- START BLOCK : listAlbum -->
+            <div  class="col-1-4 mobile-50 mobile-30">
+                <div class="image"><a href="{link}">{image}</a></div>
+                <div class="c5"></div>
+                <h2 class="item-name"><a href="{link}">{name}</a></h2>
+                <div class="count-image"  style="display:none">({num_photo} images)</div>
+            </div>{br}
+            <!-- END BLOCK : listAlbum -->
+            <div class="c"></div>
+        </div>
+        <!-- END BLOCK : album -->
+        <!-- START BLOCK : photocell -->
+        <div>
+        	<!-- START BLOCK : cellPhoto -->
+            <div  class="col-1-4 mobile-50 mobile-30">
+                <div class="image"><a href="{bigimage}" onclick="return hs.expand(this)">{image}</a></div>
+                <div class="c5"></div>
+                <h2 class="item-name">{name}</h2>
+                
+            </div>{br}
+            <!-- END BLOCK : cellPhoto -->
+            <div class="c10"></div>
+            <div style="border-bottom:solid 1px #EEE"></div>
+            <div class="c5"></div>
+            <div class="paging">{page}</div>
+        </div>
+        <!-- END BLOCK : photocell -->
+</div>

@@ -1,0 +1,112 @@
+<div class="crumb"><a href="{dir_path}/">Trang chủ</a> > {pathpage}</div>
+    <div class="c10"></div>
+	<div style="padding-right:10px;">
+    <!-- START BLOCK : contactinfo -->
+    <div>{contentcontact}</div>
+    <div class="c10"></div>
+    <div>
+    			<div style="border:solid 1px #CCC; height:400px" id="map">
+              	
+              </div>
+              <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+				    <script>
+				      var infowindow = new google.maps.InfoWindow({ size: new google.maps.Size(150, 50) });
+						var map;
+						var latidude;
+						var longtidude;
+						var title;
+						title = '<div><h2 style="font-size:12px; text-transform:uppercase; padding0px; margin:0px; padding-bottom:5px">{title}</h2><div>{address}</div></div>';
+						
+						function initializeMaps() {
+						    //geocoder = new google.maps.Geocoder();
+						    var latlng = new google.maps.LatLng({latitude}, {longitude});
+						    var myOptions = {
+						        zoom: 12,
+						        center: latlng,
+						        mapTypeId: google.maps.MapTypeId.ROADMAP
+						    };
+						    map = new google.maps.Map(document.getElementById("map"), myOptions);
+						    createMarkerMaps(latlng, title);
+						}
+						
+						function createMarkerMaps(latlng, html) {
+						
+						    var contentString = html;
+						    var marker = new google.maps.Marker({
+						        position: latlng,
+						        map: map,
+						        zIndex: Math.round(latlng.lat() * -100000) << 5
+						    });
+						
+						    infowindow.setContent(contentString);
+						    infowindow.open(map, marker);
+						
+						    google.maps.event.addListener(marker, 'click', function () {
+						        infowindow.setContent(contentString);
+						        infowindow.open(map, marker);
+						    });
+						    //    gmarkers.push(marker);
+						}
+					  
+				      google.maps.event.addDomListener(window, 'load', initializeMaps);
+				    </script>
+    </div>
+    <div class="c10"></div>
+    <!-- END BLOCK : contactinfo -->
+    <div class="message" style="color:#FF0000; text-align:center; font-weight:bold">{message}</div>
+    <form action="" method="post" id="contactform" onSubmit="return check_contact();">
+    	<input type="hidden"  name="code" value="save" />
+	    <table width="80%" border="0" align="center" cellpadding="5" cellspacing="0">
+		  <tr>
+		    <td width="120" valign="top"><strong>Họ tên *</strong></td>
+		    <td><input type="text" name="fullname" id="fullname" class="txtcontact notNull" data-alert="Bạn cần nhập vào họ tên !"></td>
+		  </tr>
+		  <tr>
+		    <td valign="top"><strong>Email *</strong></td>
+		    <td><input type="text" name="email" id="email" class="txtcontact notNull" data-alert="Bạn cần nhập vào địa chỉ email !"></td>
+		  </tr>
+		  <tr>
+		    <td valign="top"><strong>Điện thoại *</strong></td>
+		    <td><input type="text" name="phonenumber" id="phonenumber" class="txtcontact notNull" data-alert="Bạn cần nhập vào số điện thoại !"></td>
+		  </tr>
+		  <tr>
+		    <td valign="top"><strong>Địa chỉ</strong></td>
+		    <td><input type="text" name="address" id="address" class="txtcontact"></td>
+		  </tr>
+		  <tr>
+		    <td height="113" valign="top"><strong>Nội dung *</strong></td>
+		    <td><textarea name="request"  rows="5" id="request" class="textareacontact notNull" data-alert="Please enter your request !"></textarea></td>
+		  </tr>
+		  <tr>
+		    <td valign="top"><strong>Captcha</strong></td>
+		    <td><img style="margin-right:10px;" src="{dir_path}/lib/imagesercurity.php" name="imgCaptcha" align="absmiddle" id="imgCaptcha" /><input type="text" name="address" id="address" class="txtcontact notNull" style="width:100px;" data-alert="Bạn cần nhập vào captcha"></td>
+	      </tr>
+		  <tr>
+		    <td>&nbsp;</td>
+		    <td><input type="submit" name="button" id="button" value="Gửi"><input type="reset" name="Reset" id="button" value="Nhập lại"></td>
+		  </tr>
+		</table>
+	</form>
+
+
+<script>
+$(function(){
+	$('.notNull').change(function(){
+		check_contact();
+	});
+});
+	function check_contact(){
+		ok= true;
+		$('#contactform .error').remove();
+		$('#contactform .notNull').each(function(){
+			if($(this).val()==''){
+				$("<div class='error'>" + $(this).attr('data-alert') + "</div>").insertAfter($(this)); 	
+				ok=false;
+			}
+		});	
+		return ok;
+	}
+</script>
+<div class="c20"></div>
+</div>
+</div>

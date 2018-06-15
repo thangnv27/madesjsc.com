@@ -1,0 +1,132 @@
+<!-- START BLOCK : menubar -->
+<li><a href="#menu"><i class="fa fa-bars" style="font-size:18px;"></i></a></li>
+<li class="{homeactive}"><a href="{dir_path}/"><i class="fa fa-home" style="font-size:18px"></i></a></li>
+<!-- START BLOCK : item_barmenu -->
+<li class="{active}"><a href="{link}" class="">{name}</a>
+	<!-- START BLOCK : has_sub_menu -->
+    <ul>
+    	<!-- START BLOCK : submenudrop -->
+        <li class="{active1}"><a href="{link1}">{name1}</a></li>
+        <!-- END BLOCK : submenudrop -->   
+    </ul>
+    <!-- END BLOCK : has_sub_menu -->   
+</li>
+<!-- END BLOCK : item_barmenu --> 
+<!-- END BLOCK : menubar --> 
+<!-- START BLOCK : topmenu -->
+<div class="top-menu">
+	<!-- START BLOCK : item_topmenu -->
+    {line}<a href="{link}">{name}</a>
+    <!-- END BLOCK : item_topmenu --> 
+</div>
+<!-- END BLOCK : topmenu --> 
+<!-- START BLOCK : showmenumobile -->
+<nav id="menu">
+    <ul>
+    <!-- START BLOCK : m_level1 -->
+        <li><a href="{link}">{name}</a>
+        <!-- START BLOCK : m_level2 -->
+        	<li><a  href="{link1}">-- {name1}</a>
+             <!-- START BLOCK : showlevel3 -->
+            <ul>
+                <!-- START BLOCK : m_level3 -->
+                <li><a href="{link2}">{name2}</a>
+               		<!-- START BLOCK : showlevel4 -->
+                    <ul>
+                    <!-- START BLOCK : m_level4 -->
+                        <li><a href="{link3}">{name3}</a></li>
+                    <!-- END BLOCK : m_level4 -->     
+                    </ul>
+                <!-- END BLOCK : showlevel4 -->     
+                </li>
+                <!-- END BLOCK : m_level3--> 
+            </ul>
+        <!-- END BLOCK : showlevel3 -->   
+        <!-- END BLOCK : m_level2 -->     
+        </li>
+     <!-- END BLOCK : m_level1 -->
+    </ul>
+</nav>
+<!-- END BLOCK : showmenumobile --> 
+<!-- START BLOCK : menubarfooter -->
+	<!-- START BLOCK : item_menu -->
+		{line}<a href="{link}">{name}</a>
+    <!-- END BLOCK : item_menu --> 
+<!-- END BLOCK : menubarfooter --> 
+<!-- START BLOCK : topmenu -->
+	<!-- START BLOCK : item_topmenu -->
+    	{line}<a href="{link}">{icon}{name}</a>
+    <!-- END BLOCK : item_topmenu --> 
+<!-- END BLOCK : topmenu --> 
+<!-- START BLOCK : menuright -->
+	<!-- START BLOCK : item_menu_right -->
+	<div class="title-box">
+        <div class="title-box-2"><a href="{link}">{name}</a></div>
+    </div>
+     <ul class="menuright">
+     	<!-- START BLOCK : r_level1 -->
+        <li class="{active}"><a href="{link1}"><i class="fa fa-angle-left"></i>{name1}</a>
+        	<!-- START BLOCK : show_r_level2 -->
+            <ul>
+            	<!-- START BLOCK : r_level2 -->
+                <li><a href="{link2}">{name2}</a></li>
+                <!-- END BLOCK : r_level2 --> 
+            </ul>
+            <!-- END BLOCK : show_r_level2 --> 
+            
+        </li>
+        <!-- START BLOCK : show_r_level2_1 -->
+        <div class="subright">
+        	<!-- START BLOCK : r_level2_1 -->
+            <div class="{active2}"><a href="{link2}"><i class="fa fa-caret-right"></i> {name2}</a></div>
+            <!-- END BLOCK : r_level2_1 --> 
+        </div>
+         <!-- END BLOCK : show_r_level2_1 --> 
+        <!-- END BLOCK : r_level1 --> 
+        
+    </ul>
+    <!-- END BLOCK : item_menu_right --> 
+<!-- END BLOCK : menuright --> 
+<!-- START BLOCK : mainmenu -->
+    <!-- START BLOCK : item_menu_main -->
+    <div class="main-menu-drop">
+        <div class="main-text"><a href="{link}">{name}</a></div>
+        <ul style="max-height:400px; overflow:auto">
+    	<!-- START BLOCK : main_level1 -->
+            <li><a href="{link1}"><i class="fa fa-angle-double-right"></i>{name1}</a></li>
+		<!-- END BLOCK : main_level1 -->        
+        </ul>
+       
+    </div>
+     <div class="hd-mua-hang-top" style="background:#f5791f;"><a href="#">{hdmuaname}</a>
+     	<div class="drop">
+        	{hdmuacontent}
+        </div>
+     </div>
+    <!-- END BLOCK : item_menu_main -->  
+<!-- END BLOCK : mainmenu --> 
+<!-- START BLOCK : mainmenu1 -->
+<a href="{link}" class="main hide-on-mobile">{name}</a>
+<!-- END BLOCK : mainmenu1 --> 
+<!-- START BLOCK : footercol -->
+<div class="col-1-4">
+	<!-- START BLOCK : col1 -->
+    <div class="title-footer"><a href="{link}">{name}</a></div>
+    <div class="c5"></div>
+    <!-- END BLOCK : subcol1 --> 
+    <div class="item_list_footer"><a href="{link1}"><i class="fa fa-angle-double-right"></i>{name1}</a></div>
+     <!-- END BLOCK : subcol1 --> 
+    <!-- END BLOCK : col1 --> 
+    <div class="c5"></div>
+</div>
+<div class="col-1-4">
+	<!-- START BLOCK : col2 -->
+    <div class="title-footer"><a href="{link}">{name}</a></div>
+    <div class="c5"></div>
+    <!-- START BLOCK : subcol2 -->
+    <div class="item_list_footer"><a href="{link1}"><i class="fa fa-angle-double-right"></i>{name1}</a></div>
+    <!-- END BLOCK : subcol2 --> 
+    <!-- END BLOCK : col2 --> 
+    <div class="c5"></div>
+</div>
+<!-- END BLOCK : footercol --> 

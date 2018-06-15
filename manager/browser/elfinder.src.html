@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>elFinder 2.x source version with PHP connector</title>
+
+	<script src="jquery/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="jquery/jquery-ui-1.10.1.custom.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="jquery/ui-themes/smoothness/jquery-ui-1.10.1.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/elfinder.css" type="text/css">
+
+
+	<script src="elfinderfull.js"></script>
+	
+	<style type="text/css">
+		body { font-family:arial, verdana, sans-serif;}
+		.button {
+			width: 100px;
+			position:relative;
+			display: -moz-inline-stack;
+			display: inline-block;
+			vertical-align: top;
+			zoom: 1;
+			*display: inline;
+			margin:0 3px 3px 0;
+			padding:1px 0;
+			text-align:center;
+			border:1px solid #ccc;
+			background-color:#eee;
+			margin:1em .5em;
+			padding:.3em .7em;
+			border-radius:5px; 
+			-moz-border-radius:5px; 
+			-webkit-border-radius:5px;
+			cursor:pointer;
+		}
+/*
+		#dialog {
+			position:absolute;
+			left:50%;
+			top:1000px;
+		}
+*/
+	</style>
+
+	<script>
+		$().ready(function() {
+			$('#dialog').click(function() {
+				var fm = $('<div/>').dialogelfinder({
+					url : 'php/connector.php',
+					lang : 'vi',
+					width : 840,
+					destroyOnClose : true,
+					getFileCallback : function(files, fm) {
+						$('#abc').attr('value',files.url);
+					},
+					commandsOptions : {
+						getfile : {
+							oncomplete : 'close',
+							folders : true
+						}
+					}
+				}).dialogelfinder('instance');
+			});
+
+		});
+	</script>
+    
+    
+</head>
+<body>
+	
+	<div id="dialog" class="button">dialog</div>
+	
+	<br clear="all"/>
+	<input type="text" id="abc" value="123" />
+
+
+	
+
+</body>
+</html>

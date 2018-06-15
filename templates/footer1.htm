@@ -1,0 +1,205 @@
+<div class="c20"></div>
+</div>
+<div class="footer">
+    <div class="grid" style="background:none; padding-left:20px;">
+        <div class="c10"></div>
+        {chantrang1}
+        <div class="c5"></div>
+        <div class="" >
+
+            <div class="col-1-4">                	
+                <div class="smo-footer">
+                    <div class="title-footer">{namecopyright}</div>
+                    <div class="c5"></div>
+                    <div style="line-height:18px">{copyright}</div>
+                    <div class="c5"></div>
+                    <div><i class="fa fa-home icon-cicle-footer-25"></i> {addresssupport}</div>
+                    <div class="c5"></div>
+                    <div>
+                        <i class="fa fa-phone icon-cicle-footer-25"></i>{hotline}
+                    </div>
+                    <div class="c5"></div>
+                    <div>
+                        <i class="fa fa-envelope-o icon-cicle-footer-25"></i>{emailsupport}
+                    </div>
+                    <div class="c10"></div>
+                    <div class="divline-footer " style="border-bottom:solid 1px #fff; border-top:solid 1px #ccc"></div>
+                    <div class="c10"></div>
+
+                </div>
+                <!--  --->
+            </div>
+            <div class="col-1-4">
+
+                <form action="/" method="post" id="news_letter_form" onSubmit="return check_null_newslater();">
+                    <input type="hidden" name="code" value="letter_add"/>
+                    <div class="box-newslater">
+                        <div class="title-footer">Nhận bản tin</div>
+                        <div class="c5"></div>
+
+                        <div class="col-2-3" style="padding-right:0px;"><input id="news_letter_textbox" name="news_letter_textbox" type="text" class="notNull" data-alert="*" placeholder="Nhập email nhận tin khuyến mại.."></div>
+
+                        <div class="col-1-3" style="padding-right:0px;"><a onClick="$('#news_letter_form').submit();
+                                return false;" class="btn-newletter"  type="button" > Gửi </a></div>
+                        <div class="c"></div>
+                    </div>
+                </form>
+                <script>
+                    function check_null_newslater() {
+                        var ok = true;
+                        if ($('#news_letter_textbox').val() == '') {
+
+                            alert('Vui lòng nhập email của bạn');
+                            //$('#news_letter_textbox').focus();
+                            ok = false;
+
+                        }
+                        else {
+                            checkEmailLetter = $('#news_letter_textbox').val();
+                            if ((checkEmailLetter.indexOf('@') < 0) || ((checkEmailLetter.charAt(checkEmailLetter.length - 4) != '.') && (checkEmailLetter.charAt(checkEmailLetter.length - 3) != '.'))) {
+                                alert('Email không hợp lệ !');
+                                ok = false;
+                            }
+                            
+                        }
+                        return ok;
+                    }
+                </script>
+
+				<div class="c10"></div>
+               
+                    	{menuChinhsach}
+               
+
+{menuChinhsach}
+               
+
+            </div>
+            <div class="col-1-4">
+                <div><a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=12504" target="_blank" rel="nofollow"><img alt="đã đăng ký bộ công thương" src="{dir_path}/images/20150827110756-dathongba.png" width="100%" ></a></div>
+                <div class="smo-footer" style="padding-left:20px;">
+
+                    <a href="{facebook}" target="_blank" class="icon-cicle-footer fa fa-facebook fa-2x" style="background-color:#3b5998; color:#FFF"></a>
+                    <a href="{linkedin}" target="_blank" class="icon-cicle-footer fa fa-linkedin fa-2x" style="background-color:#1884BB; color:#FFF"></a>
+                    <a href="{twitter}" target="_blank" class="icon-cicle-footer fa fa-twitter fa-2x" style="background-color:#2b7bb9; color:#FFF"></a>
+                    <a href="{pinterest}" target="_blank" class="icon-cicle-footer fa fa-pinterest fa-2x" style="background-color:#cb2027; color:#FFF"></a>
+                    <a href="{youtube}" target="_blank" class="icon-cicle-footer fa fa-youtube fa-2x" style="background-color:#cb2027; color:#FFF"></a>
+                </div>
+            </div>
+            <div class="col-1-4 hide-on-mobile">
+                <div class="title-footer">{fanpagename}</div>
+                <div style="background:#FFF; width:100%; overflow:hidden">
+                    {fanpage}
+                </div>
+                <!--  --->
+            </div>
+            <div class="c10"></div>
+        </div>
+    </div>      
+    <div style="background:#333">
+        <div class="grid" style="background:none;">
+            <div class="col-1-1">
+                <div class="divline-footer hide-on-mobile" style="border-bottom:solid 1px #666; border-top:solid 1px #000"></div>
+                <div class="menu-bar-footer hide-on-mobile">
+                    {menufooter}
+
+
+<!-- Start Code  popup b�n -->
+
+<div id="quangcao"><script type="text/javascript">
+function hide_float_left() {
+    var content = document.getElementById('float_content_left');
+    var hide = document.getElementById('hide_float_left');
+    if (content.style.display == "none")
+    {content.style.display = "block"; hide.innerHTML = '<a href="javascript:hide_float_left()">Off [X]</a>'; }
+        else { content.style.display = "none"; hide.innerHTML = '<a href="javascript:hide_float_left()">Xem </a>';
+    }
+    }
+</script>
+<style>
+.float-ck { position: fixed; bottom: 0px; z-index: 9000}
+* html .float-ck {position:absolute;bottom:auto;top:expression(eval (document.documentElement.scrollTop+document.docum entElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))) ;}
+#float_content_left {border: 1px solid #01AEF0;}
+#hide_float_left {text-align:left; font-size: 11px;}
+#hide_float_left a {background: #01AEF0; padding: 2px 4px; color: #FFF;}
+</style>
+<div class="float-ck" style="left: 0px" >
+    <div id="hide_float_left">
+        <a href="javascript:hide_float_left()">End [X]</a></div>
+    <div id="float_content_left">
+        <!-- Start quang cao-->
+           <a href="#" target="_blank" ><img src="http://antien.vn/uploaded/x3/chuyen-dia-diem.gif" width="550" height="120"></a>
+        <!-- End quang cao -->
+    </div>
+</div>
+</div>
+
+
+<!--The end Code popup -->
+
+                </div>
+				
+                <div class="divline-footer" style="border-bottom:solid 1px #666; border-top:solid 1px #000"></div>
+                <div style="color:#FFF; padding-top:10px;">{chantrang2}</div>
+                <div style="line-height:30px; color:#ccc; "><div style="padding-left:10px;">
+                        <div class="col-1-2">Copyright © 2015 antien.vn. All rights reserved.</div>
+                        <div class="col-1-2" style="text-align:right;">
+
+                  
+
+
+<!-- SuBiz  (standard)-->
+<style type="text/css">
+.hisella-messages { position: fixed; bottom: 0; right: 0; z-index: 999999; }
+.hisella-messages-outer { position: relative; }
+#hisella-minimize { background: #3b5998; font-size: 14px; color: #fff; padding: 3px 10px; position: absolute; top: -34px; left: -1px; border: 1px solid #E9EAED; cursor: pointer; }
+@media screen and (max-width:768px){ #hisella-facebook { opacity:0; } .hisella-messages { bottom: -300px; right: -135px; } }
+</style>
+<div id='fb-root'></div>
+<script>
+(function($) { $(document).ready(function(){ $( '#hisella-minimize' ).click( function() { if( $( '#hisella-facebook' ).css( 'opacity' ) == 0 ) { $( '#hisella-facebook' ).css( 'opacity', 1 ); $( '.hisella-messages' ).animate( { right: '0' } ).animate( { bottom: '0' } ); } else { $( '.hisella-messages' ).animate( { bottom: '-300px' } ).animate( { right: '-135px' }, 400, function(){ $( '#hisella-facebook' ).css( 'opacity', 0 ) } ); } } ) }); })(jQuery);
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="hisella-messages"><div class="hisella-messages-outer"><div id="hisella-minimize">Chat Facebook</div><div id="hisella-facebook" class='fb-page' data-adapt-container-width='true' data-height='300' data-hide-cover='false' data-href='https://www.facebook.com/AnTien.vn/' data-show-facepile='true' data-show-posts='false' data-small-header='false' data-tabs='messages' data-width='250'></div></div></div>
+
+<!-- SuBiz  END  -->
+
+
+
+
+                        </div>
+                    </div></div>
+            </div>
+
+        </div> <div class="c"></div>
+    </div>    
+
+<a href="tel:{callnow}" class="call-footer"><i class="fa fa-phone"></i> Gọi ngay</a>
+    <a id="button-btt" href="#" title="Go to top" style="display: inline;"><i class="fa fa-caret-up"></i><br>Top</a>
+    {menumobile}
+</div>
+</div>
+<script>
+    $('#countcart').text('{quantity}');
+</script>
+
+<!--Start Chen mang xa hoi -->
+ 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d562834f75590"></script>
+
+<!--The End Chen mang xa hoi -->
+
+
+
+
+
+
+
+</body>
+</html>

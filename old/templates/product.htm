@@ -1,0 +1,148 @@
+<div style="padding-right:5px;">
+<div>{catimage}</div>
+<div class="c2"></div>
+<div class="crumb"><a href="{dir_path}/">Trang chủ</a> / {pathpage}</div>
+<!-- START BLOCK : productCat -->
+<div class="c5"></div>
+
+<h1 class="titlepage">{catname}</h1>
+<div class="c5"></div>
+<div class="boderproductpage">
+	<div class="boxtextcat">{catcontent}</div>
+    <div class="c5"></div>
+	<!-- START BLOCK : cell -->
+    <div class="cellProduct {borderleftnone}">
+        <div class="image">
+            <a href="{link_detail}">{image}</a>
+        </div>
+        <div class="productName"><a href="{link_detail}">{name}</a></div>
+        <div class="price">{price} VND</div>
+    </div>
+    <!-- END BLOCK : cell -->
+    <div class="c5"></div>
+    <div class="paging">{pages}</div>
+    <div class="c5"></div>
+</div>
+<!-- END BLOCK : productCat -->
+<!-- START BLOCK : productDetail -->
+<div class="bordere8e8e8">
+	<div class="c5"></div>
+	<h2 class="titlepage">{catname}</h2>
+	<div class="c5"></div>
+	
+	<div class="proimagedetail">{image}</div>
+    <div class="proinfodetail">
+    	<div class="proinfodetail1">
+	    	<h1 class="productDetailName">{name}</h1>
+	        <div class="proAttribute">Mã sản phẩm: {ma}</div>
+	        <div class="lineAttri"></div>
+            {pricekm}
+	       {price}
+	        <div class="lineAttri"></div>
+	        {attr}
+            <div class="proAttribute">
+            	<div class="btnorder"><a href="{linkcart}">Mua hàng</a></div>
+                <div class="c"></div>
+            </div>
+            <div class="lineAttri"></div>
+            <div class="boxsupportdetail">
+            	<div>Tư vấn qua điện thoại</div>
+                <div class="phonenumber">{phonesupport}</div>
+            </div>
+            <div class="lineAttri"></div>
+            
+        </div>
+        <div class="c5"></div>
+        <div>
+            	<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style ">
+				  <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+				  <a class="addthis_button_tweet"></a>
+				  <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+				  <a class="addthis_counter addthis_pill_style"></a>
+				  </div>
+				
+				<!-- AddThis Button END -->
+            </div>
+            <div class="c"></div>
+    </div>
+    <div class="c10"></div>
+    <ul class="tabdetail">
+    	<li class="active" rel="#tabchitiet">Chi tiết sản phẩm</li>
+        {tab2}
+        {tab3}
+        <li  rel="#tabphukientuongthich">Phụ kiện tương thích</li>
+        <li rel="#tabykienkhachhang">Ý kiến khách hàng</li>
+    </ul>
+    <div class="c"></div>
+    <div class="contentTab" id="tabchitiet" style="display:block">{content}</div>
+    {tab2content}
+    {tab3content}
+    <div class="contentTab" id="tabphukientuongthich" style="padding:0px;" >
+    		<!-- START BLOCK : cell1 -->
+            <div class="cellProductother {noneborderleft}">
+		        <div class="image">
+		            <a href="{link_detail}">{image1}</a>
+		        </div>
+		        <div class="productName"><a href="{link_detail}">{name1}</a></div>
+		        <div class="price">{price1} VND</div>
+		    </div>
+            <!-- END BLOCK : cell1 -->
+    </div>
+    <div class="contentTab" id="tabykienkhachhang">
+      	<div id="loadcomment" style="max-height:300px; overflow:auto"></div>
+        <div class="c15"></div>
+        <div>
+        <script src="{dir_path}/js/jquery.form.min.js"></script>
+        <script src="{dir_path}/js/jquery.blockUI.js"></script>
+        <form action="{dir_path}/index4.php?page=commentpro&id={id}" method="post" id="commentform">
+        	<input type="hidden" name="code" value="1" />
+        	<div><div style="width:60px; float:left"><strong>Họ tên:</strong></div> <input id="commentname" name="commentname" type="text" style="250px;" /></div>
+            <div><div style="width:60px; float:left"><strong>Ý kiến:</strong></div><textarea name="comment" id="comment" rows="5" style="width:600px"></textarea></div>
+            <div><input name="" type="button" value="Gửi" onclick="checknull();" style="margin-left:70px;" /></div>
+        </form>    
+        </div>
+        
+    </div>
+    <div class="c10"></div>
+</div>
+<script>
+	function checknull(){
+		var ok = true;
+		if($('#commentname').val()==''){
+			alert('Bạn phải nhập vào tên của mình !')	;
+			$('#commentname').focus();
+			ok = false;
+			return false
+		}
+		if($('#comment').val()==''){
+			alert('Bạn cho biết ý kiến của mình !')	;
+			$('#comment').focus();
+			ok = false;
+			return false;
+		}
+		if(ok==true){
+			$('#commentform').block({ message: 'Đang gửi ...' }); 
+			$('#commentform').submit();	
+		}
+		
+	}
+	
+	
+	$(document).ready(function() { 
+		var options = { 
+	        target:        '#commentform',   // target element(s) to be updated with server response 
+	    }; 
+	 
+	    // bind form using 'ajaxForm' 
+	    $('#commentform').ajaxForm(options); 
+		$("#loadcomment").load("{dir_path}/index4.php?page=commentpro&id={id_product}&code=load", function(response, status, xhr) {
+			  
+			});
+	}); 
+	 
+</script>
+<!-- END BLOCK : productDetail -->
+</div>
+
+</div>

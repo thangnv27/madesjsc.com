@@ -1,0 +1,6 @@
+﻿/*
+Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+CKEDITOR.addTemplates('default',{imagesPath:CKEDITOR.getUrl(CKEDITOR.plugins.getPath('templates')+'templates/images/'),templates:[{title:'Form đăng ký',image:'',description:'From đăng ký',html:'<div class="line-regist"></div><div>Caption</div><div>Control</div><div class="line-regist"></div><div>Caption</div><div>Control</div><div class="line-regist"></div><div>Caption</div><div class="noteform">(Res cam kết bảo mật số điện thoại học viên)</div><div>Control</div><div class="line-regist"></div><div>Caption</div><div class="noteform">(Res cam kết bảo mật địa chỉ Email của học viên)</div><div>Control</div><div class="line-regist"></div><div>Caption</div><div>Control</div><div class="line-regist"></div><div>Caption</div><div>Control</div><div class="line-regist"></div><div>Caption</div><div class="c5"></div><div>Control</div><div class="c5"></div><div class="line-regist"></div><div>Caption</div><div >Control</div><div class="line-regist"></div><div>Caption</div><div>Control</div><div class="line-regist"></div><div class="line-regist"></div><div>Button</div>'}]});

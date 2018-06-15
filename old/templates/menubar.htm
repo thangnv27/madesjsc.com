@@ -1,0 +1,52 @@
+<div class="menubar">
+    <ul id="nav">
+        <li class="iconhome"><a href="{dir_path}/">&nbsp;</a></li>
+        <!-- START BLOCK : menubar -->
+        <li><a href="{link}" target="{target}">{name}</a></li>
+        <!-- END BLOCK : menubar -->
+    </ul>
+    <div class="searchbox">
+    	<form action="{dir_path}/search/" id="searchform">
+        <input name="keywords" type="text" class="txtkeyword" placeholder="Tìm kiếm sản phẩm "><a href="#" onclick="$('#searchform').submit();"><div class="btnsearch"></div></a>
+        </form>
+    </div>
+</div>
+<div class="c5"></div>
+{catimage}
+<!-- START BLOCK : slideshow -->
+            <div class="slideshow">
+            	<link rel="stylesheet" type="text/css" href="{dir_path}/css/sliderman.css"/>
+                <script src="{dir_path}/js/sliderman.1.1.1.js"></script>
+            	<!-- <img src="images/picslide.jpg" width="802" height="292">-->
+                <div id="slider_container_2">
+
+					<div id="SliderName_2" class="SliderName_2">
+                    <!-- START BLOCK : list_logo -->
+						<a href="{link}" target="{target}">{image}</a>
+                        <!-- END BLOCK : list_logo -->
+						
+					</div>
+					<div class="c"></div>
+					<div id="SliderNameNavigation_2"></div>
+					<div class="c"></div>
+	
+					<script type="text/javascript">
+						effectsDemo2 = 'rain,stairs,fade';
+						var demoSlider_2 = Sliderman.slider({container: 'SliderName_2', width: 802, height: 292, effects: effectsDemo2,
+							display: {
+								autoplay: 3000,
+								loading: {background: '#000000', opacity: 0.5, image: '{dir_path}/images/loading.gif'},
+								buttons: {hide: true, opacity: 1, prev: {className: 'SliderNamePrev_2', label: ''}, next: {className: 'SliderNameNext_2', label: ''}},
+								description: {hide: true, background: '#000000', opacity: 0.4, height: 50, position: 'bottom'},
+								navigation: {container: 'SliderNameNavigation_2', label: '<img src="{dir_path}/images/clear.gif" />'}
+							}
+						});
+					</script>
+	
+					<div class="c"></div>
+				</div>
+            </div>
+            <div class="c5"></div>
+<!-- END BLOCK : slideshow -->
+
+<div class="hotlinebar"><span class="label">Hỗ trợ trực tuyến: </span>{supportonline}</div>

@@ -1,0 +1,35 @@
+	# Power By Nguyen Binh
+	# suongmumc@gmail.com
+
+
+	<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf|ico)$">
+		Header set Cache-Control "max-age=72000"
+	</FilesMatch>
+	<FilesMatch "\.(html|htm)$">
+		Header set Cache-Control "max-age=14400, must-revalidate"
+	</FilesMatch>
+
+
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+		RewriteBase /
+
+
+		RewriteCond %{REQUEST_URI} ^manager/(.*) [NC]
+
+
+		RewriteRule ^index\.php$ - [L]
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+
+		RewriteRule . /index.php [L]
+	</IfModule>
+
+
+
+
+redirect 301 /dong-ho-thong-minh-smart-watch/dong-ho-thong-minh-samsung-galaxy-gear.html /dong-ho-thong-minh-smart-watch/
+redirect 301 /andoird-tivi-box-chinh-hang/android-tv-box-enybox-m8s-chinh-hang-chip-loi-tu-amlogic-s812-ram-2gb-ho-tro-4k.html /andoird-tivi-box-chinh-hang/
+
+
+

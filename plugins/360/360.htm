@@ -1,0 +1,43 @@
+<div>
+    <script src="{dir_path}/plugins/360/js/spritespin.js" type="text/javascript"></script>
+
+    <style type="text/css">
+      .spritespin-preload {
+        background : url('/plugins/360/css/images/ajax-loader.gif') no-repeat 50% 50%;
+      }
+      .spritespin-instance {
+      
+		text-align:center;
+      }
+    </style>
+  
+    <div id="360frames"></div>
+   
+    
+    <script type="text/javascript">
+    $(function(){
+      var frames = [
+          <!-- START BLOCK : image_list -->
+            {image_item}
+          <!-- END BLOCK : image_list -->
+          
+        ];
+
+      $("#360frames").spritespin({
+        width     : 400,
+        height    : 340,
+        frames    : frames.length,
+        behavior  : "hold", /* "drag" */
+        module    : "360",
+        sense     : 1,
+        source    : frames,
+        animate   : true,
+        loop      : true,
+        frameWrap : true,
+        frameStep : 1,
+        frameTime : 60,
+        enableCanvas : true
+      });
+    });
+    </script>
+</div>

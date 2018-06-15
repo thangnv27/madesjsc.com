@@ -1,0 +1,41 @@
+<!-- START BLOCK : spnoibat -->
+<div class="c20"></div>
+<h2 class="title-black">{name}</h2>
+<div class="line-v"></div>
+<div class="c10"></div>
+<div style="width:1216px; ">
+<div class="spnoibat spnoibat_{id}  autoplay ">
+    <!-- START BLOCK : products -->
+    <div>
+    	 <div class="cell-product marginleft0">
+         	
+            <div class="image">
+            	{km}
+            	<a href="{link_detail}">{image}</a>
+            </div>
+            <h2 class="product-name"><a href="{link_detail}">{name}</a></h2>
+            {price}
+            <div class="tt-km-cell">{ttkhuyenmai}</div>
+            <a class="btn-order" href="{link_detail}">Mua hàng</a>
+        </div>
+        
+    </div>
+    <!-- END BLOCK : products -->
+    
+       
+</div>
+</div>
+
+<script>
+	$('.spnoibat_{id}').slick({
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+		arrows: true
+    });
+</script>
+<!-- END BLOCK : spnoibat -->
